@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <JMessage/JMessage.h>
 
 @interface AppDelegate ()
 
@@ -17,8 +18,72 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [JMessage setupJMessage:launchOptions appKey:@"4f7aef34fb361292c566a1cd" channel:@"lingz im 200channel" apsForProduction:NO category:nil];
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        //可以添加自定义categories
+        [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+                                                          UIUserNotificationTypeSound |
+                                                          UIUserNotificationTypeAlert)
+                                              categories:nil];
+    } else {
+        //categories 必须为nil
+        [JPUSHService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+                                                          UIRemoteNotificationTypeSound |
+                                                          UIRemoteNotificationTypeAlert)
+                                              categories:nil];
+    }
+   
+    [self unObserveAllNotifications];
+
     return YES;
 }
+- (void)unObserveAllNotifications {
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+      [defaultCenter removeObserver:self
+                             name:kJPFNetworkDidReceiveMessageNotification
+                           object:nil];
+    [defaultCenter removeObserver:self
+                             name:kJPFServiceErrorNotification
+                           object:nil];
+}
+
+
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    // Required - 注册 DeviceToken
+    [JPUSHService registerDeviceToken:deviceToken];
+}
+- (void)networkDidReceiveMessage:(NSNotification *)notification {
+    NSDictionary *userInfo = [notification userInfo];
+    NSLog(@"---自定义消息：%@",userInfo);
+}
+
+
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    // Required - 处理收到的通知
+    [JPUSHService handleRemoteNotification:userInfo];
+    NSLog(@"---iOS6后收到通知：%@",userInfo);
+
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    
+    // IOS 7 Support Required
+    [JPUSHService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+    NSLog(@"---iOS7后收到通知：%@",userInfo);
+}
+
+- (void)application:(UIApplication *)application
+didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -36,6 +101,9 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [application setApplicationIconBadgeNumber:0];
+    [JPUSHService setBadge:0];
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

@@ -10,6 +10,17 @@
 
 @interface FirstViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *connectionStatus;
+@property (weak, nonatomic) IBOutlet UITextField *userName;
+@property (weak, nonatomic) IBOutlet UITextField *userPassword;
+@property (weak, nonatomic) IBOutlet UITextView *allResultTV;
+
+@property (weak, nonatomic) IBOutlet UITextField *nikenameTF;
+@property (weak, nonatomic) IBOutlet UITextField *birthdayTF;
+@property (weak, nonatomic) IBOutlet UITextField *regionTF;
+@property (weak, nonatomic) IBOutlet UITextField *signatureTF;
+@property (weak, nonatomic) IBOutlet UISwitch *genderSwitch;
+@property (weak, nonatomic) IBOutlet UIImageView *showAvatarImage;
 
 @end
 
