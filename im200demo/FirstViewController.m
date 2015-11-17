@@ -9,7 +9,7 @@
 #import "FirstViewController.h"
 #import <JMessage/JMessage.h>
     NSString* filePath;
-@interface FirstViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface FirstViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate,JMessageDelegate>
 @property (nonatomic ,retain)JMSGUser *myJMSGUser;
 
 @end
@@ -19,7 +19,10 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self unObserveAllNotifications];
-    
+    [JMessage removeAllDelegates];
+    [JMessage addDelegate:self withConversation:nil];
+    NSLog(@"-------进入了home界面");
+
     //隐藏键盘，star
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
     //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。
@@ -132,24 +135,46 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
             allResult = [NSString stringWithFormat:@"登录用户：%@，成功！",theUserName];
             [self.allResultTV setText:allResult];
             
-            _myJMSGUser = resultObject;
+[JPUSHService setTags:[NSSet setWithObjects:@"tag4",@"tag5",@"tag6",nil] alias:@"别名" callbackSelector:@selector(tagsAliasCallback:tags:alias:) target:self];
             
-            [_myJMSGUser largeAvatarData:^(NSData *data, NSString *objectId, NSError *error) {
+            _myJMSGUser = resultObject;//把登录后返回的内容赋给这个实例化的JMSGUser对象
+        
+            self.showDisplayName.enabled = YES;
+            NSString *displayName = _myJMSGUser.displayName ;
+            NSLog(@"---displayName:%@",displayName);
+            [self.showDisplayName setText:displayName];
+            
+           Boolean isEqualToUser=  [_myJMSGUser isEqualToUser:_myJMSGUser];
+            NSLog(@"----isEqualToUser:%d",isEqualToUser);
+            //通过这个这个实例化的JMSGUser对象去获取当前登录用户的头像的大图
+//            [_myJMSGUser largeAvatarData:^(NSData *data, NSString *objectId, NSError *error) {
+//                if (error == nil) {
+//                    NSLog(@"------获取我的大图成功！－－－result:%@",resultObject);
+//                    self.showAvatarImage.image = [UIImage imageWithData:data];
+//                }
+//                else{
+//                    NSLog(@"------获取我的大图失败！－－－error：%@，－－－result：%@",error,resultObject);
+//                    
+//                }
+//            }];
+            
+            //通过这个这个实例化的JMSGUser对象去获取当前登录用户的头像的缩略图
+           [_myJMSGUser thumbAvatarData:^(NSData *data, NSString *objectId, NSError *error) {
                 if (error == nil) {
                     NSLog(@"------获取我的大图成功！－－－result:%@",resultObject);
-                    self.showAvatarImage.image = [UIImage imageWithData:data];
+                    self.showAvatarImage.image = [UIImage imageWithData:data];//把获取缩略图的方法得到的data赋值到image view展示
                 }
                 else{
                     NSLog(@"------获取我的大图失败！－－－error：%@，－－－result：%@",error,resultObject);
                     
                 }
-            }];
+           }];
 
         }
         else{
-            allResult = [NSString stringWithFormat:@"登录用户:%@，失败！error：%@，result：%@",theUserName, error,resultObject];
+            allResult = [NSString stringWithFormat:@"登录用户:%@，失败！－－－error：%@，－－－result：%@",theUserName, error,resultObject];
             [self.allResultTV setText:allResult];
-            NSLog(@"-------登录用户：%@ ,失败！原因：%@",theUserName,error);
+            NSLog(@"-------登录用户：%@ ,失败！－－－error：%@，－－－result：%@",theUserName, error,resultObject);
             
         }
 
@@ -219,10 +244,15 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
     }];
 }
 //更新生日
+// 1999-10-22
 -(void)updateBirthday{
     self.birthdayTF.enabled=YES;
-    NSNumber *birthdayText = self.birthdayTF.text;
-    [JMSGUser updateMyInfoWithParameter:birthdayText userFieldType:kJMSGUserFieldsBirthday completionHandler:^(id resultObject, NSError *error) {
+    NSString *birthdayText = self.birthdayTF.text;
+    NSNumber *birthNum = @(birthdayText.integerValue);
+    
+
+    
+    [JMSGUser updateMyInfoWithParameter:birthNum userFieldType:kJMSGUserFieldsBirthday completionHandler:^(id resultObject, NSError *error) {
         if (error==nil) {
             NSLog(@"－－－设置生日“%@” 成功！",birthdayText);
         }
@@ -315,7 +345,9 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
 
 - (IBAction)clickGetMyInfo:(id)sender {
     allResult = [NSString stringWithFormat:@"－-我的个人信息：%@",[JMSGUser myInfo]];
-  NSLog(@"------toux:%@", [JMSGUser myInfo].avatar) ;
+    NSLog(@"------我的个人信息:%@",allResult) ;
+
+  NSLog(@"------我的头像:%@", [JMSGUser myInfo].avatar) ;
     [self.allResultTV setText:allResult];
     
   
@@ -339,6 +371,57 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
     }];
 }
 
+//callback
+- (void)tagsAliasCallback:(int)iResCode tags:(NSSet*)tags alias:(NSString*)alias {
+    NSLog(@"rescode: %d, \ntags: %@, \nalias: %@\n", iResCode, tags , alias);
+}
+- (IBAction)clickGetAllConversation:(id)sender {
+    [JMSGConversation allConversations:^(id resultObject, NSError *error) {
+        if (error != nil) {
+            NSLog(@"-------当前登录用户会话获取出错！");
+        }
+        NSString *myAllConversation = [NSString stringWithFormat:@"%@",resultObject];
+//        [self.allResultTV setText:myAllConversation];
+        NSLog(@"--------当前用户的会话列表如下：%@",myAllConversation);
+    }];
+}
+
+-(void)onReceiveMessage:(JMSGMessage *)message error:(NSError *)error{
+    if (error !=nil) {
+        NSLog(@"------home－ -onReceiveMessage收到群消息,--error：%@,---message:%@",error,message);
+        
+    }
+    NSLog(@"--home---onReceiveMessage收到群消息：%@",message);
+}
+
+-(void)onSendMessageResponse:(JMSGMessage *)message error:(NSError *)error{
+    if (error !=nil) {
+        NSLog(@"------home-onSendMessageResponse发啥群消息,--error：%@,---message:%@",error,message);
+    }
+    NSLog(@"----home -onSendMessageResponse发送群消息：%@",message);
+}
+
+-(void)onReceiveMessageDownloadFailed:(JMSGMessage *)message{
+    
+    NSLog(@"-----home--onReceiveMessageDownloadFailed收到群消息下载失败,----message:%@",message);
+}
+
+-(void)onGroupInfoChanged:(JMSGGroup *)group{
+    NSLog(@"----home---onGroupInfoChanged:%@",group);
+}
+
+-(void)onConversationChanged:(JMSGConversation *)conversation{
+    NSLog(@"---home----onConversationChanged:%@",conversation);
+}
+
+-(void)onUnreadChanged:(NSUInteger)newCount{
+    NSLog(@"----home---onUnreadChanged:%d",newCount);
+    
+}
+
+-(void)onLoginUserKicked{
+    NSLog(@"-----home--onLoginUserKicked");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

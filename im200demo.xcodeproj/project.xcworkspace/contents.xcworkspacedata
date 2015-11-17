@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:im200demo.xcodeproj">
+      location = "self:/Users/linguangzhen/Movies/git/im200demo/im200demo.xcodeproj">
    </FileRef>
 </Workspace>

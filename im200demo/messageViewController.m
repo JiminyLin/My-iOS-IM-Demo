@@ -9,10 +9,18 @@
 #import "messageViewController.h"
 #import <JMessage/JMessage.h>
 
-@interface messageViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface messageViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate,JMessageDelegate>
+{
+    JMSGMessage * _message;
+    NSString *singleMessage;
+}
 
 @property(strong,nonatomic)    UITextView *textview;
 @property (strong,nonatomic) JMSGUser *otherJMSGUser;
+@property (strong ,nonatomic )JMSGMessage *myJMSGMessage;
+@property (strong,nonatomic)JMSGCustomContent *myJMSGCustomContent;
+@property (strong ,nonatomic )JMSGConversation * myJMSGConversation;
+@property (strong,nonatomic)  JMSGAbstractContent *myAbstractContent ;
 @end
 NSString *user1,*user2,*contentText,*curTime;
 NSInteger sendTimes;
@@ -20,8 +28,9 @@ NSInteger sendTimes;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    //隐藏键盘，star
+    NSLog(@"-------进入了 单聊 界面");
+
+     //隐藏键盘，star
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
     //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。
     tapGestureRecognizer.cancelsTouchesInView = NO;
@@ -31,6 +40,10 @@ NSInteger sendTimes;
     // Do any additional setup after loading the view, typically from a nib.
     _textview = [[UITextView alloc] initWithFrame: CGRectMake(0, 210, 320, 140) ];
     [self.view addSubview:_textview];
+    [JMessage removeAllDelegates];
+
+    [JMessage addDelegate:self withConversation:nil];
+    
 }
 
 //指定要隐藏键盘的控件
@@ -40,7 +53,6 @@ NSInteger sendTimes;
     [self.contentTF resignFirstResponder];
     [self.sendTimeTF resignFirstResponder];
     [self.textview resignFirstResponder];
-   
     
 }
 
@@ -81,6 +93,9 @@ NSInteger sendTimes;
                           @"",nil];
     }
     NSLog(@"-----要获取de 用户有：%@",userArray) ;
+
+    JMSGUser *myInfo = [JMSGUser myInfo];
+    
     [JMSGUser userInfoArrayWithUsernameArray:userArray completionHandler:^(id resultObject, NSError *error) {
         if (error ==nil) {
             NSLog(@"---获取用户 %@ 、%@的用户信息成功！，result：%@",user1,user2,resultObject);
@@ -89,6 +104,8 @@ NSInteger sendTimes;
             [_textview setText:getUserInfo];
             
             _otherJMSGUser  = resultObject[0];
+            Boolean isEqualToUser=  [ myInfo isEqualToUser:_otherJMSGUser];
+            NSLog(@"----isEqualToUser:%d",isEqualToUser);
             [_otherJMSGUser largeAvatarData:^(NSData *data, NSString *objectId, NSError *error) {
                 if (error == nil) {
                     NSLog(@"----获取 %@ 的头像",userArray);
@@ -120,8 +137,11 @@ NSInteger sendTimes;
             NSLog(@"------------与 %@的会话创建成功！",user1 );
             NSString *sendContent = [NSString stringWithFormat:@"%@:%@ - %@",user1,contentText,curTime];
             NSLog(@"-----------------sendContent:%@",sendContent);
+            _myJMSGConversation = resultObject;
+            [JMessage removeAllDelegates];
+            [JMessage addDelegate:self withConversation:_myJMSGConversation];
             
-            [JMSGMessage sendSingleTextMessage:sendContent toUser:user1];
+            [JMSGMessage sendSingleTextMessage:sendContent toUser:user1];//调用发送单聊文本接口发消息
 
         }
         else{
@@ -132,8 +152,39 @@ NSInteger sendTimes;
     
 
 }
+- (IBAction)clickSendCustomMSG:(id)sender {
+    [self initUserContent];
+         NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:nil ,nil];
+    
+//    JMSGCustomContent *customContent = [[JMSGCustomContent alloc] initWithCustomDictionary:dictionary];
+    JMSGCustomContent *customContent = [[JMSGCustomContent alloc] initWithCustomDictionary:@{@"custom key":@"custom value"}];
+//
+   [JMSGConversation createSingleConversationWithUsername:user1 completionHandler:^(id resultObject, NSError *error) {
+       if (error !=nil) {
+           NSLog(@"----发custom msg 创建会话失败！");
+                 }
+       _myJMSGConversation = resultObject;
+       
+       [JMessage removeAllDelegates];
+       [JMessage addDelegate:self withConversation:_myJMSGConversation];
+       NSLog(@"-----发送文本按钮这里添加了delegate");
+       [_myAbstractContent addStringExtra:@"  JMSGAbstractContent *AbstractContent values" forKey:@"  JMSGAbstractContent *AbstractContent -key"];
+
+       JMSGMessage *cutMessage = [_myJMSGConversation createMessageWithContent:customContent];
+//       [customContent addObjectValue:nil forKey:nil];
+         [customContent addObjectValue:@"custom key1" forKey:@"custom value 1"];
+//       [customContent addStringExtra:@"EXTRAS V" forKey:@"EXTRAS KEY"];
+              [customContent addStringExtra:nil forKey:nil];
+
+       [_myJMSGConversation sendMessage:cutMessage];
+       NSLog(@"------发送的custom：%@",cutMessage);
+
+   }];
+ }
+
 
 - (IBAction)clickRepeatSendText:(id)sender {
+    [self initUserContent];
     self.sendTimeTF.enabled =YES;
     NSString *sendTimesString = self.sendTimeTF.text;
     sendTimes = [sendTimesString integerValue];
@@ -143,13 +194,19 @@ NSInteger sendTimes;
             NSLog(@"------------与 %@的会话创建成功！",user1 );
             NSString *sendContent = [NSString stringWithFormat:@"%@:%@ - %@",user1,contentText,curTime];
             NSLog(@"-----------------sendContent:%@",sendContent);
-            
+            _myJMSGConversation = resultObject;
             for (int i = 1; i<=sendTimes; i++) {
-                [self initUserContent];
-                [self curTimeValue];
-                NSString *sendContent = [NSString stringWithFormat:@"%@:--%d--%@,%@",user1,i,contentText,curTime];
+                [self initUserContent];//初始化本页面的文本框
+                [self curTimeValue];//获取一下当前时间
+                NSString *sendContent = [NSString stringWithFormat:@"%@:--%d--%@,%@",user1,i,contentText,curTime];//把用户输入的内容和当前时间合成最终发送的内容
                 NSLog(@"-----------------sendContent:%@",sendContent);
+                [JMessage removeAllDelegates];
+
+                [JMessage addDelegate:self withConversation:_myJMSGConversation];
+                NSLog(@"-----循环发送按钮这里添加了delegate");
+
                 [JMSGMessage sendSingleTextMessage:sendContent toUser:user1];
+                
             }
         }
         else{
@@ -166,12 +223,16 @@ NSInteger sendTimes;
     UIImage* image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     NSData *picData = UIImagePNGRepresentation(image);;
     [self dismissViewControllerAnimated:YES completion:nil];
-    
-    [JMSGMessage sendSingleImageMessage:picData toUser:user1];
+    [JMessage removeAllDelegates];
+    [JMessage addDelegate:self withConversation:_myJMSGConversation];
+    NSLog(@"-----发送图片页面添加了delegate");
+
+
+    [JMSGMessage sendSingleImageMessage:picData toUser:user1];//调用单聊发图接口发送从相册里面选择的图片
    }
 
 - (IBAction)clickSendImag:(id)sender {
-    
+    //打开显示相册控件
     UIImagePickerController *imgController = [[UIImagePickerController alloc]init];
     imgController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     imgController.delegate = self;
@@ -182,6 +243,73 @@ NSInteger sendTimes;
 
 }
 - (IBAction)clickSendVoice:(id)sender {
+}
+- (IBAction)clickClearTV:(id)sender {
+    [_textview setText:@"/"];
+}
+- (IBAction)clickDelSingleConversation:(id)sender {
+    [self initUserContent];
+    [ JMSGConversation deleteSingleConversationWithUsername:user1];
+}
+- (IBAction)clickAllMessage:(id)sender {
+    [_myJMSGConversation allMessages:^(id resultObject, NSError *error) {
+        if (error != nil) {
+            NSLog(@"----single--获取此会话的消息失败～");
+        }
+        NSString *groupAllMessage = [NSString stringWithFormat:@"%@",resultObject];
+        [_textview setText:groupAllMessage];
+        NSLog(@"---single---获取到当前会话的所有消息如下：%@",groupAllMessage);
+    }];
+}
+
+-(void)onReceiveMessage:(JMSGMessage *)message error:(NSError *)error{
+    if (error!=nil) {
+        NSLog(@"---single--onReceiveMessage error is %@",error);
+    }
+    _message = message;
+    NSLog(@"----single---onReceiveMessage :%@",message);
+    NSString *onReceiveMessage = [NSString stringWithFormat:@"收到im消息：%@",message];
+    [_textview setText:onReceiveMessage];
+
+}
+
+-(void)onSendMessageResponse:(JMSGMessage *)message error:(NSError *)error{
+    if (error!=nil) {
+        NSLog(@"---single--onReceiveMessage error is %@",error);
+    }
+    _message = message;
+    NSLog(@"---single----im onSendMessageResponse :%@",message);
+    NSString *onSendMessageResponse = [NSString stringWithFormat:@"发送im消息：%@",message];
+
+    [_textview setText:onSendMessageResponse];
+}
+
+-(void )onReceiveMessageDownloadFailed:(JMSGMessage *)message{
+    _message = message;
+    NSLog(@"---single----im onReceiveMessageDownloadFailed :%@",message);
+    singleMessage = [NSString stringWithFormat:@"%@",_message];
+    [_textview setText:singleMessage];
+    NSLog(@"----single---onConversationChanged:%@",singleMessage);
+
+}
+-(void)onGroupInfoChanged:(JMSGGroup *)group{
+    NSLog(@"-----single--onGroupInfoChanged:%@",group);
+}
+-(void)onConversationChanged:(JMSGConversation *)conversation{
+    _myJMSGConversation = conversation;
+    NSLog(@"-----single--onConversationChanged:%@",conversation);
+    singleMessage = [NSString stringWithFormat:@"%@",conversation];
+    [_textview setText:singleMessage];
+    NSLog(@"-----single--onConversationChanged:%@",singleMessage);
+
+}
+
+-(void)onUnreadChanged:(NSUInteger)newCount{
+    NSLog(@"-------onUnreadChanged:%ld",newCount);
+
+}
+-(void)onLoginUserKicked{
+    NSLog(@"-------onLoginUserKicked");
 }
 
 - (void)didReceiveMemoryWarning {

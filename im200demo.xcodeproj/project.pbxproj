@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6008A53F1BDF7664007A634F /* buttonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 6008A53E1BDF7664007A634F /* buttonBlue.png */; };
 		6008A5431BE0A4E2007A634F /* messageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6008A5411BE0A4E2007A634F /* messageViewController.m */; };
+		600E55AC1BE88787007DE826 /* JMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600E55AB1BE88787007DE826 /* JMessage.framework */; };
+		6016EE351BEC41790083ADAD /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6016EE341BEC41790083ADAD /* ConversationViewController.m */; };
 		603BFA0F1BDDFF240001148C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 603BFA0E1BDDFF240001148C /* main.m */; };
 		603BFA121BDDFF240001148C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 603BFA111BDDFF240001148C /* AppDelegate.m */; };
 		603BFA151BDDFF240001148C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603BFA141BDDFF240001148C /* FirstViewController.m */; };
@@ -30,16 +32,19 @@
 		608236231BDE69A200F944FA /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 603BFA3D1BDDFFFD0001148C /* libsqlite3.0.tbd */; };
 		60A5D4C31BDF44C900499CCE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 603BFA211BDDFF240001148C /* Info.plist */; };
 		60A5D4C41BDF4A5300499CCE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EF31E61BDF1A0D0003C300 /* MobileCoreServices.framework */; };
+		60AB6D751BE708F400C440B7 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60AB6D741BE708F400C440B7 /* ChangePasswordViewController.m */; };
 		60F44E711BE120C500B4598B /* 720_切图_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F44E701BE120C500B4598B /* 720_切图_32.png */; };
 		60F44E731BE1218100B4598B /* 720__58.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F44E721BE1218100B4598B /* 720__58.png */; };
 		60F44E751BE1222800B4598B /* 群组.png in Resources */ = {isa = PBXBuildFile; fileRef = 60F44E741BE1222800B4598B /* 群组.png */; };
-		60F44E7B1BE1E41E00B4598B /* JMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F44E7A1BE1E41E00B4598B /* JMessage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6008A53E1BDF7664007A634F /* buttonBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonBlue.png; sourceTree = "<group>"; };
 		6008A5401BE0A4E2007A634F /* messageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messageViewController.h; sourceTree = "<group>"; };
 		6008A5411BE0A4E2007A634F /* messageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = messageViewController.m; sourceTree = "<group>"; };
+		600E55AB1BE88787007DE826 /* JMessage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JMessage.framework; sourceTree = "<group>"; };
+		6016EE331BEC41790083ADAD /* ConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationViewController.h; sourceTree = "<group>"; };
+		6016EE341BEC41790083ADAD /* ConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationViewController.m; sourceTree = "<group>"; };
 		603BFA0A1BDDFF240001148C /* im200demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = im200demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		603BFA0E1BDDFF240001148C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		603BFA101BDDFF240001148C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,11 +70,12 @@
 		603BFA3B1BDDFFEA0001148C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		603BFA3D1BDDFFFD0001148C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		608236201BDE68D200F944FA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		60AB6D731BE708F400C440B7 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		60AB6D741BE708F400C440B7 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
 		60EF31E61BDF1A0D0003C300 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		60F44E701BE120C500B4598B /* 720_切图_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "720_切图_32.png"; sourceTree = "<group>"; };
 		60F44E721BE1218100B4598B /* 720__58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 720__58.png; sourceTree = "<group>"; };
 		60F44E741BE1222800B4598B /* 群组.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "群组.png"; sourceTree = "<group>"; };
-		60F44E7A1BE1E41E00B4598B /* JMessage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JMessage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +92,7 @@
 				603BFA341BDDFFC90001148C /* Foundation.framework in Frameworks */,
 				603BFA321BDDFFBE0001148C /* SystemConfiguration.framework in Frameworks */,
 				603BFA301BDDFFA30001148C /* CoreTelephony.framework in Frameworks */,
-				60F44E7B1BE1E41E00B4598B /* JMessage.framework in Frameworks */,
+				600E55AC1BE88787007DE826 /* JMessage.framework in Frameworks */,
 				603BFA2E1BDDFF660001148C /* CoreGraphics.framework in Frameworks */,
 				603BFA2C1BDDFF620001148C /* CoreFoundation.framework in Frameworks */,
 				603BFA2A1BDDFF590001148C /* CoreAudio.framework in Frameworks */,
@@ -100,14 +106,14 @@
 		603BFA011BDDFF230001148C = {
 			isa = PBXGroup;
 			children = (
-				60F44E7A1BE1E41E00B4598B /* JMessage.framework */,
-				60F44E6F1BE120B400B4598B /* icon */,
+				600E55AB1BE88787007DE826 /* JMessage.framework */,
 				603BFA0C1BDDFF240001148C /* im200demo */,
-				60EF31E61BDF1A0D0003C300 /* MobileCoreServices.framework */,
+				60F44E6F1BE120B400B4598B /* icon */,
 				608236201BDE68D200F944FA /* CoreLocation.framework */,
-				603BFA3D1BDDFFFD0001148C /* libsqlite3.0.tbd */,
+				60EF31E61BDF1A0D0003C300 /* MobileCoreServices.framework */,
 				603BFA3B1BDDFFEA0001148C /* AudioToolbox.framework */,
 				603BFA391BDDFFE00001148C /* libz.tbd */,
+				603BFA3D1BDDFFFD0001148C /* libsqlite3.0.tbd */,
 				603BFA371BDDFFD70001148C /* Security.framework */,
 				603BFA351BDDFFD00001148C /* UIKit.framework */,
 				603BFA331BDDFFC90001148C /* Foundation.framework */,
@@ -132,6 +138,10 @@
 		603BFA0C1BDDFF240001148C /* im200demo */ = {
 			isa = PBXGroup;
 			children = (
+				6016EE331BEC41790083ADAD /* ConversationViewController.h */,
+				6016EE341BEC41790083ADAD /* ConversationViewController.m */,
+				60AB6D731BE708F400C440B7 /* ChangePasswordViewController.h */,
+				60AB6D741BE708F400C440B7 /* ChangePasswordViewController.m */,
 				6008A5401BE0A4E2007A634F /* messageViewController.h */,
 				6008A5411BE0A4E2007A634F /* messageViewController.m */,
 				6008A53E1BDF7664007A634F /* buttonBlue.png */,
@@ -244,6 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				603BFA181BDDFF240001148C /* SecondViewController.m in Sources */,
+				60AB6D751BE708F400C440B7 /* ChangePasswordViewController.m in Sources */,
+				6016EE351BEC41790083ADAD /* ConversationViewController.m in Sources */,
 				603BFA121BDDFF240001148C /* AppDelegate.m in Sources */,
 				603BFA151BDDFF240001148C /* FirstViewController.m in Sources */,
 				6008A5431BE0A4E2007A634F /* messageViewController.m in Sources */,
@@ -385,7 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: // / (JXBUJATAU9)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

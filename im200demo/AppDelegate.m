@@ -10,7 +10,6 @@
 #import <JMessage/JMessage.h>
 
 @interface AppDelegate ()
-
 @end
 
 @implementation AppDelegate
@@ -33,19 +32,25 @@
                                                           UIRemoteNotificationTypeAlert)
                                               categories:nil];
     }
-   
-    [self unObserveAllNotifications];
+    [JMessage setLogOFF ];
+    [self registerNotificationCenter];
+//    [JPUSHService setDebugMode];
 
     return YES;
 }
-- (void)unObserveAllNotifications {
+- (void)registerNotificationCenter {
     NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
-      [defaultCenter removeObserver:self
-                             name:kJPFNetworkDidReceiveMessageNotification
-                           object:nil];
-    [defaultCenter removeObserver:self
-                             name:kJPFServiceErrorNotification
-                           object:nil];
+
+    [defaultCenter addObserver:self
+                      selector:@selector(serviceError:)
+                          name:kJPFServiceErrorNotification
+                        object:nil];
+    
+    [defaultCenter addObserver:self
+                      selector:@selector(receivePushMessage:)
+                          name:kJPFNetworkDidReceiveMessageNotification
+                        object:nil];
+    
 }
 
 
@@ -55,11 +60,31 @@
     // Required - 注册 DeviceToken
     [JPUSHService registerDeviceToken:deviceToken];
 }
-- (void)networkDidReceiveMessage:(NSNotification *)notification {
-    NSDictionary *userInfo = [notification userInfo];
-    NSLog(@"---自定义消息：%@",userInfo);
-}
+//- (void)networkDidReceiveMessage:(NSNotification *)notification {
+//    NSDictionary *userInfo = [notification userInfo];
+//    NSLog(@"---自定义消息：%@",userInfo);
+//}
 
+- (void)receivePushMessage:(NSNotification *)notification {
+    NSDictionary *userInfo = [notification userInfo];
+    NSString *title = [userInfo valueForKey:@"title"];
+    NSString *content = [userInfo valueForKey:@"content"];
+    NSDictionary *extra = [userInfo valueForKey:@"extras"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    [dateFormatter setDateFormat:@"yyyy-MM-dd hh:mm:ss"];
+    
+    NSString *currentContent = [NSString
+                                stringWithFormat:
+                                @"收到自定义消息:%@\ntitle:%@\ncontent:%@\nextra:%@\n",
+                                [NSDateFormatter localizedStringFromDate:[NSDate date]
+                                                               dateStyle:NSDateFormatterNoStyle
+                                                               timeStyle:NSDateFormatterMediumStyle],
+                                title, content, extra];
+    NSLog(@"%@", currentContent);
+
+
+}
 
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
@@ -83,7 +108,11 @@
 didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
 }
-
+- (void)serviceError:(NSNotification *)notification {
+    NSDictionary *userInfo = [notification userInfo];
+    NSString *error = [userInfo valueForKey:@"error"];
+    NSLog(@"%@", error);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

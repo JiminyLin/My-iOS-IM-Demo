@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *connectionStatus;
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *userPassword;
+@property (weak, nonatomic) IBOutlet UILabel *showDisplayName;
 @property (weak, nonatomic) IBOutlet UITextView *allResultTV;
 
 @property (weak, nonatomic) IBOutlet UITextField *nikenameTF;
