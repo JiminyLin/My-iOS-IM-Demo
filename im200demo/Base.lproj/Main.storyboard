@@ -520,7 +520,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZhJ-Lp-Nuc">
-                                <rect key="frame" x="178" y="199" width="46" height="30"/>
+                                <rect key="frame" x="164" y="199" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -530,7 +530,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6at-jJ-iXd">
-                                <rect key="frame" x="103" y="229" width="53" height="30"/>
+                                <rect key="frame" x="91" y="229" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -581,18 +581,8 @@
                                     <action selector="clickGetGroupInfo:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Esf-7M-zQS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7gu-zW-BP0">
-                                <rect key="frame" x="178" y="228" width="79" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="删群会话" backgroundImage="buttonBlue.png"/>
-                                <connections>
-                                    <action selector="clickDelConversation:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="uMr-qp-eh4"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mWb-hN-PVK">
-                                <rect key="frame" x="99" y="199" width="60" height="30"/>
+                                <rect key="frame" x="91" y="199" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -602,7 +592,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7ZJ-e9-1dR">
-                                <rect key="frame" x="138" y="166" width="67" height="30"/>
+                                <rect key="frame" x="134" y="166" width="67" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -636,6 +626,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="display name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nEe-ra-jCX">
+                                <rect key="frame" x="213" y="204" width="101" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7gu-zW-BP0">
+                                <rect key="frame" x="164" y="228" width="79" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="删群会话" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickDelConversation:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="uMr-qp-eh4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -643,6 +651,7 @@
                     <tabBarItem key="tabBarItem" title="群聊" image="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="groupDecTF" destination="r2R-R3-m61" id="Qyw-Fa-XQo"/>
+                        <outlet property="groupDisplayNameLb" destination="nEe-ra-jCX" id="JrP-qq-OXj"/>
                         <outlet property="groupID_TF" destination="mjH-TO-T2X" id="WBm-cl-39F"/>
                         <outlet property="groupMember2TF" destination="Epo-iU-FX6" id="eNt-Uj-72H"/>
                         <outlet property="groupMemberTF" destination="t8G-MJ-eo8" id="nO8-mL-cbl"/>

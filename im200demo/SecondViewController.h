@@ -19,6 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *groupDecTF;
 
+@property (weak, nonatomic) IBOutlet UILabel *groupDisplayNameLb;
 
 @end
 

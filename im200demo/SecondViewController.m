@@ -129,6 +129,9 @@
         if (error == nil) {
             NSLog(@"-----成功 获取群:%@ 的信息!群信息如下：%@",groupIDTextStr,resultObject);
             _myGroup = resultObject;
+          NSString * groupDispalyNameText =   [_myGroup displayName];
+            self.groupDisplayNameLb.enabled = YES;
+            [self.groupDisplayNameLb setText:groupDispalyNameText];
         }
         else{
             NSLog(@"-----获取 群:%@ 的信息 失败!error：%@,result: %@",groupIDTextStr,error,resultObject);

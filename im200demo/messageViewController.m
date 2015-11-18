@@ -171,10 +171,11 @@ NSInteger sendTimes;
        [_myAbstractContent addStringExtra:@"  JMSGAbstractContent *AbstractContent values" forKey:@"  JMSGAbstractContent *AbstractContent -key"];
 
        JMSGMessage *cutMessage = [_myJMSGConversation createMessageWithContent:customContent];
+       [cutMessage setFromName:@"custom的发送方用户名"];
 //       [customContent addObjectValue:nil forKey:nil];
          [customContent addObjectValue:@"custom key1" forKey:@"custom value 1"];
-//       [customContent addStringExtra:@"EXTRAS V" forKey:@"EXTRAS KEY"];
-              [customContent addStringExtra:nil forKey:nil];
+       [customContent addStringExtra:@"EViewXTRAS V" forKey:@"EXTRAS KEY"];
+//              [customContent addStringExtra:nil forKey:nil];
 
        [_myJMSGConversation sendMessage:cutMessage];
        NSLog(@"------发送的custom：%@",cutMessage);
@@ -188,31 +189,40 @@ NSInteger sendTimes;
     self.sendTimeTF.enabled =YES;
     NSString *sendTimesString = self.sendTimeTF.text;
     sendTimes = [sendTimesString integerValue];
+    NSLog(@"content text repeatText:%@",contentText);
     
-    [JMSGConversation createSingleConversationWithUsername:user1 completionHandler:^(id resultObject, NSError *error) {
-        if (error == nil) {
-            NSLog(@"------------与 %@的会话创建成功！",user1 );
-            NSString *sendContent = [NSString stringWithFormat:@"%@:%@ - %@",user1,contentText,curTime];
-            NSLog(@"-----------------sendContent:%@",sendContent);
-            _myJMSGConversation = resultObject;
+    //用createSingleMessageWithContent:username  发消息
+//    JMSGTextContent *jTextContent = [[JMSGTextContent alloc] initWithText:contentText];
+//    [jTextContent addStringExtra:@"单聊文本消息的extras value" forKey:@"单聊文本消息的extras key" ];
+//   _myJMSGMessage= [JMSGMessage createSingleMessageWithContent:jTextContent username:user1];
+//    [JMSGMessage sendMessage:_myJMSGMessage];
+    
+    
+    //用sendSingleTextMessage:内容 toUser:用户名发消息
+//    [JMSGConversation createSingleConversationWithUsername:user1 completionHandler:^(id resultObject, NSError *error) {
+//        if (error == nil) {
+//            NSLog(@"------------与 %@的会话创建成功！",user1 );
+//            NSString *sendContent = [NSString stringWithFormat:@"%@:%@ - %@",user1,contentText,curTime];
+//            NSLog(@"-----------------sendContent:%@",sendContent);
+//            _myJMSGConversation = resultObject;
             for (int i = 1; i<=sendTimes; i++) {
                 [self initUserContent];//初始化本页面的文本框
                 [self curTimeValue];//获取一下当前时间
                 NSString *sendContent = [NSString stringWithFormat:@"%@:--%d--%@,%@",user1,i,contentText,curTime];//把用户输入的内容和当前时间合成最终发送的内容
-                NSLog(@"-----------------sendContent:%@",sendContent);
+//                NSLog(@"-----------------sendContent:%@",sendContent);
                 [JMessage removeAllDelegates];
-
+//
                 [JMessage addDelegate:self withConversation:_myJMSGConversation];
-                NSLog(@"-----循环发送按钮这里添加了delegate");
-
+//                NSLog(@"-----循环发送按钮这里添加了delegate");
+//
                 [JMSGMessage sendSingleTextMessage:sendContent toUser:user1];
-                
+//
             }
-        }
-        else{
-            NSLog(@"------------与 %@的会话创建失败！error ： %@ ,Result: %@",user1,error,resultObject );
-        }
-    }];
+//        }
+//        else{
+//            NSLog(@"------------与 %@的会话创建失败！error ： %@ ,Result: %@",user1,error,resultObject );
+//        }
+//    }];
 
 }
 

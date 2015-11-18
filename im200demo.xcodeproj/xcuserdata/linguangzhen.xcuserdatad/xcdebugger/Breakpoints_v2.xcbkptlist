@@ -26,12 +26,12 @@
                   moduleName = "im200demo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/linguangzhen/Movies/git/im200demo/im200demo/ConversationViewController.m"
-                  timestampString = "469438993.800755"
+                  timestampString = "469518822.588705"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "440"
                   endingLineNumber = "440"
-                  offsetFromSymbolStart = "538">
+                  offsetFromSymbolStart = "488">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -41,12 +41,12 @@
                   moduleName = "im200demo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/linguangzhen/Movies/git/im200demo/im200demo/ConversationViewController.m"
-                  timestampString = "469438993.801048"
+                  timestampString = "469518822.589388"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "440"
                   endingLineNumber = "440"
-                  offsetFromSymbolStart = "42">
+                  offsetFromSymbolStart = "72">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -64,6 +64,22 @@
             startingLineNumber = "441"
             endingLineNumber = "441"
             landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "im200demo/messageViewController.m"
+            timestampString = "469519773.429143"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "-clickSendCustomMSG:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

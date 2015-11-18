@@ -67,12 +67,12 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
 }
 
 - (void)networkDidSetup:(NSNotification *)notification {
-    NSLog(@"已连接");
+    NSLog(@"－已连接");
     [self.connectionStatus setText:@"JPush 已连接"];
 }
 
 - (void)networkDidClose:(NSNotification *)notification {
-    NSLog(@"未连接");
+    NSLog(@"－未连接");
     [self.connectionStatus setText:@"JPush 未连接"];
 
 }
@@ -80,16 +80,16 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
 - (void)networkDidRegister:(NSNotification *)notification {
     NSLog(@"%@", [notification userInfo]);
     
-    NSLog(@"已注册");
+    NSLog(@"－已注册");
     [self.connectionStatus setText:@"JPush 已注册"];
 
 }
 
 - (void)networkDidLogin:(NSNotification *)notification {
     
-    NSLog(@"已登录");
-    NSLog(@"get RegistrationID: %@",[JPUSHService registrationID]);
-    NSString * loginText =[ NSString stringWithFormat:@"JPush 已登录！rid: %@",[JPUSHService registrationID]];
+    NSLog(@"－已登录");
+    NSLog(@"－get RegistrationID: %@",[JPUSHService registrationID]);
+    NSString * loginText =[ NSString stringWithFormat:@"－JPush 已登录！rid: %@",[JPUSHService registrationID]];
     [self.connectionStatus setText:loginText];
 
 }
