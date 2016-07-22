@@ -43,7 +43,7 @@ NSArray *_delegateCovList;
     }
     
 //    [JPUSHService setupWithOption:launchOptions appKey:appkey
-//                          channel:@"lingz im 213channel"
+//                          channel:@"im 213channel"
 //                 apsForProduction:NO
 //            advertisingIdentifier:advertisingId];
     [JMessage addDelegate:self  withConversation:nil];
