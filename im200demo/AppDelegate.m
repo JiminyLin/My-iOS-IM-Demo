@@ -23,7 +23,7 @@
 NSArray *_delegateCovList;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSString * appkey = @"228a71eadccde93549bbf5c4";
+    NSString * appkey = @"";
 
     NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
   
@@ -48,9 +48,7 @@ NSArray *_delegateCovList;
 //            advertisingIdentifier:advertisingId];
     [JMessage addDelegate:self  withConversation:nil];
 
-    [JMessage setupJMessage:launchOptions appKey:appkey channel:@"lingz im 213channel" apsForProduction:YES category:nil];//98f67476b10c3bf6690559a9 228a71eadccde93549bbf5c4 8a06e1d67fd00b0423ffff6d 4f7aef34fb361292c566a1cd
-    
-//    [JMessage  setIsGlobalNoDisturb:YES handler:^(id resultObject, NSError *error) {
+    [JMessage setupJMessage:launchOptions appKey:appkey channel:@"im 213channel" apsForProduction:YES category:nil];///    [JMessage  setIsGlobalNoDisturb:YES handler:^(id resultObject, NSError *error) {
 //        if (error != nil){
 //            NSLog(@"------set setIsGlobalNoDisturb:YES  fail:%@ ",error);
 //            return ;

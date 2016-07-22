@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "603BFA091BDDFF230001148C"
                BuildableName = "im213qptXCTest.app"
-               BlueprintName = "im213qptXCTest"
-               ReferencedContainer = "container:im213qptXCTest.xcodeproj">
+               BlueprintName = "im213demo"
+               ReferencedContainer = "container:im213demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "603BFA091BDDFF230001148C"
             BuildableName = "im213qptXCTest.app"
-            BlueprintName = "im213qptXCTest"
-            ReferencedContainer = "container:im213qptXCTest.xcodeproj">
+            BlueprintName = "im213demo"
+            ReferencedContainer = "container:im213demo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,8 +58,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "603BFA091BDDFF230001148C"
             BuildableName = "im213qptXCTest.app"
-            BlueprintName = "im213qptXCTest"
-            ReferencedContainer = "container:im213qptXCTest.xcodeproj">
+            BlueprintName = "im213demo"
+            ReferencedContainer = "container:im213demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,8 +77,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "603BFA091BDDFF230001148C"
             BuildableName = "im213qptXCTest.app"
-            BlueprintName = "im213qptXCTest"
-            ReferencedContainer = "container:im213qptXCTest.xcodeproj">
+            BlueprintName = "im213demo"
+            ReferencedContainer = "container:im213demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
