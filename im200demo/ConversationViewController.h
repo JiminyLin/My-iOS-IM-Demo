@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface ConversationViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *covUser;
@@ -15,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *covOffSet;
 @property (weak, nonatomic) IBOutlet UITextField *covLimit;
 @property (weak, nonatomic) IBOutlet UILabel *covUnreadCountLB;
+@property(nonatomic, strong) CLLocationManager *currentLoaction;
 
 @end

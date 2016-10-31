@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *userTF;
 @property (weak, nonatomic) IBOutlet UITextField *contentTF;
 @property (weak, nonatomic) IBOutlet UITextField *sendTimeTF;
+@property (weak, nonatomic) IBOutlet UILabel *unReadCountTF;
 
 @end

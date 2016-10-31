@@ -12,7 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *groupNameTF;
 @property (weak, nonatomic) IBOutlet UITextField *groupID_TF;
-@property (weak, nonatomic) IBOutlet UITextField *groupMember2TF;
 @property (weak, nonatomic) IBOutlet UITextField *groupMemberTF;
 @property (weak, nonatomic) IBOutlet UITextField *groupMsgContentTF;
 @property (weak, nonatomic) IBOutlet UITextField *sendGroupMsgTimesTF;
