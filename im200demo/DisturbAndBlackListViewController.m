@@ -856,6 +856,7 @@ kongzifuchuan = @"";
 
 -(void)onReceiveMessage:(JMSGMessage *)message error:(NSError *)error{
     if (error !=nil) {
+<<<<<<< HEAD
         NSLog(@"－－－\n 免打扰--onReceiveMessage，收到消息异常：%@",error);
         _disAlertText = [NSString stringWithFormat:@"收到消息，异常！\n%@",error];
         [self showAlert:_disAlertText];
@@ -870,12 +871,35 @@ kongzifuchuan = @"";
     //自定义事件代码
     if(message.contentType == kJMSGContentTypeEventNotification){
         JMSGEventContent *eventContent = (JMSGEventContent *)message.content;
+=======
+        NSLog(@"－－－\n 防打扰onReceiveMessage，收到消息异常：%@",error);
+        _disAlertText = [NSString stringWithFormat:@"收到消息，异常！\n%@",error];
+        [self showAlert:_disAlertText];
+        
+        return;
+    }
+    //展示默认事件信息
+//    if (message.contentType == kJMSGContentTypeEventNotification) {
+//        NSString *showText = [((JMSGEventContent *)message.content) showEventNotification];
+//        [self showAlert:showText];
+//        NSLog(@"－－－：%@",showText);
+//
+//    }
+    _disJMessage = message;
+
+    NSLog(@"－－－\n 防打扰onReceiveMessage，成功收到消息！_disJMessage：%@",_disJMessage);
+//
+//    //自定义事件代码
+        if(_disJMessage.contentType == 5){
+        JMSGEventContent *eventContent = (JMSGEventContent *)_disJMessage.content;
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
         //获取发起事件的用户名
         NSString *fromUsername = [eventContent getEventFromUsername];
         //获取事件作用对象用户名列表
         NSArray *toUsernameList = [eventContent getEventToUsernameList];
         
         //根据事件类型，定制相应描述（以事件类型: 添加新成员为例子）
+<<<<<<< HEAD
         long eventType = eventContent.eventType;
         NSLog(@"－－－\n eventType:%ld,\nfromUsername：%@,\ntoUsernameList:%@",eventType,fromUsername,toUsernameList);
         
@@ -939,6 +963,51 @@ kongzifuchuan = @"";
     [self showAlert:_disAlertText];
     
     
+=======
+            long eventType = eventContent.eventType;
+                      NSLog(@"------fromUsername:%@,\ntoUsernameList:%@",fromUsername,toUsernameList);
+
+
+            switch(eventType)
+            {
+                case 8:
+                      _disAlertText = [NSString stringWithFormat:@"[%@]创建了群，群成员有:%@",fromUsername,[toUsernameList componentsJoinedByString:@","]];
+                    [self showAlert:_disAlertText];
+                    break;
+
+                case 9:
+                    _disAlertText = [NSString stringWithFormat:@"[%@]退出了群",fromUsername];
+                    [self showAlert:_disAlertText];
+                    break;
+
+                case 10:
+                    _disAlertText = [NSString stringWithFormat:@"[%@ ]邀请了［%@］进群",fromUsername,[toUsernameList componentsJoinedByString:@","]];
+                    [self showAlert:_disAlertText];
+                    break;
+
+                case 11:
+                    _disAlertText = [NSString stringWithFormat:@"[%@ ]把［%@］移出了群",fromUsername,[toUsernameList componentsJoinedByString:@","]];
+                    [self showAlert:_disAlertText];
+                    break;
+
+                case 12:
+                    _disAlertText = [NSString stringWithFormat:@"[%@ ]更新了群信息",fromUsername];
+                    [self showAlert:_disAlertText];
+                    break;
+
+                default:
+                    _disAlertText = [NSString stringWithFormat:@"未知群事件：%ld",eventType];
+                    [self showAlert:_disAlertText];
+
+            }
+            return;
+        }
+//
+        _disAlertText = [NSString stringWithFormat:@"收到消息！\n%@",message];
+        [self showAlert:_disAlertText];
+    
+
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 }
 
 -(void)onSendMessageResponse:(JMSGMessage *)message error:(NSError *)error{
@@ -954,6 +1023,7 @@ kongzifuchuan = @"";
     }
 }
 
+<<<<<<< HEAD
 -(void)onReceiveNotificationEvent:(JMSGNotificationEvent *)event{
     JMSGNotificationEvent *nEvent = event;
     NSLog(@"---------DisturbAndBlack--onReceiveNotificationEvent收到 通知事件");
@@ -1020,6 +1090,8 @@ kongzifuchuan = @"";
     }
 }
 
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 -(void)onReceiveMessageDownloadFailed:(JMSGMessage *)message{
     
     NSLog(@"-----防打扰 --onReceiveMessageDownloadFailed收到消息下载失败,----message:%@\n",message);
@@ -1049,6 +1121,7 @@ kongzifuchuan = @"";
     
 }
 
+<<<<<<< HEAD
 //220b90及之前的220获取好友事件的方法
 //-(void)onFriendChanged:(JMSGFriendEventContent *)event{
 //    JMSGFriendEventContent * disturbJMSGFriendEventContent = event;
@@ -1056,5 +1129,7 @@ kongzifuchuan = @"";
 //    NSLog(@"----防打扰测试---onFriendChanged:{\n好友通知事件类型:%ld,\n获取事件发生的理由:%@,\n事件发送者的username:%@,\n获取事件发送者user:%@",disturbJMSGFriendEventContent.eventType,[disturbJMSGFriendEventContent getReason],[disturbJMSGFriendEventContent getFromUsername],[disturbJMSGFriendEventContent getFromUser]);
 //    
 //}
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 
 @end

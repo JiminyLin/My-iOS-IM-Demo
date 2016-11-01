@@ -8,17 +8,25 @@
 
 #import "JMSGMsgViewController.h"
 #import <JMessage/JMessage.h>
+<<<<<<< HEAD
 #import <CFNetwork/CFNetwork.h>
 #import "XHVoiceRecordHelper.h"
 #import <CoreLocation/CoreLocation.h>
 
 @interface JMSGMsgViewController ()<JMessageDelegate,CLLocationManagerDelegate>
+=======
+#import "XHVoiceRecordHelper.h"
+
+
+@interface JMSGMsgViewController ()<JMessageDelegate>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 {
     NSString * userText;
     NSString * groupIdText;
     NSString * appkeyText;
     NSString * _curTimeV;
     NSString * jmsgAlertText;
+<<<<<<< HEAD
     NSString *FileUrlString;
     NSString * text;
     NSString* filePath;
@@ -39,10 +47,13 @@
     
     NSData *sendNSData;
     NSData *receiverNSData;
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     
     int voiceCase;
     int  imageCase;
 }
+<<<<<<< HEAD
 - (IBAction)clickSendStrideSingleFileMsg:(id)sender;
 - (IBAction)clickSendSingleFileMsg:(id)sender;
 - (IBAction)clickSendSingleLocalMsg:(id)sender;
@@ -60,6 +71,8 @@
 - (IBAction)clickGetFile:(id)sender;
 
 
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 @property (weak, nonatomic) IBOutlet UIButton *voiceBtnForSingleShortcut;
 @property (weak, nonatomic) IBOutlet UIButton *voiceBtnForStrideAppSingleShortcut;
 @property (weak, nonatomic) IBOutlet UIButton *voiceBtnForStrideAppGroupShortcut;
@@ -111,6 +124,7 @@
     //将触摸事件添加到当前view
     [self.view addGestureRecognizer:tapGestureRecognizer];
     //隐藏键盘，end
+<<<<<<< HEAD
     
     //注册LocationManager
     _currentLoaction = [[CLLocationManager alloc] init];
@@ -130,6 +144,9 @@
         NSLog(@"您的设备的［设置］－［隐私］－［定位］尚未开启");
     }
     
+=======
+
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 }
 -(void)morePage{
     [self.navigationController  popViewControllerAnimated:YES];
@@ -271,10 +288,14 @@
             [imageContenSingle addStringExtra:@"https://www.jiguang.cn" forKey:@"url key"];
 
             [imageContenSingle addNumberExtra:contentImageNSNuber forKey:@"addNumberExtra key"];
+<<<<<<< HEAD
             
           _jmsgJMessage =    [JMSGMessage createSingleMessageWithContent:imageContenSingle username:userText];
             NSString *fromName = [NSString stringWithFormat:@"%@单聊发图的fromName",userText];
             [_jmsgJMessage setFromName:fromName];
+=======
+          _jmsgJMessage =    [JMSGMessage createSingleMessageWithContent:imageContenSingle username:userText];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
             [JMSGMessage sendMessage:_jmsgJMessage];
 
         }
@@ -296,10 +317,13 @@
 
             [imageContenSingle addNumberExtra:contentImageNSNuber forKey:@"clickSendImageContentForGroup-addNumberExtra key"];
         _jmsgJMessage =    [JMSGMessage createSingleMessageWithContent:imageContenSingle username:userText];
+<<<<<<< HEAD
             
             NSString *fromName = [NSString stringWithFormat:@"%@群聊发图的fromName",userText];
             [_jmsgJMessage setFromName:fromName];
             
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
             [JMSGMessage sendMessage:_jmsgJMessage];
 
         }
@@ -334,9 +358,12 @@
     [textContenSingle addNumberExtra:textNsnuber forKey:@"addNumberExtra key"];
   _jmsgJMessage =  [JMSGMessage createSingleMessageWithContent:textContenSingle username:userText];
     
+<<<<<<< HEAD
     NSString *fromName = [NSString stringWithFormat:@"%@单聊发文本的fromName",userText];
     [_jmsgJMessage setFromName:fromName];
     
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     [JMSGMessage sendMessage:_jmsgJMessage];
     NSLog(@"－－－－－－－－clickSendContentTextForSingle:%@",text);
 
@@ -371,9 +398,12 @@
     [customContenSingle addStringExtra:@"clickSendCustomContentForSingle value" forKey:@"clickSendCustomContentForSingle-string key"];
    _jmsgJMessage =  [JMSGMessage createSingleMessageWithContent:customContenSingle username:userText];
     
+<<<<<<< HEAD
     NSString *fromName = [NSString stringWithFormat:@"%@单聊发custom的fromName",userText];
     [_jmsgJMessage setFromName:fromName];
     
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     [JMSGMessage sendMessage:_jmsgJMessage];
     NSLog(@"－－－－－－－－clickSendCustomContentForSingle:%@",text);
 
@@ -391,7 +421,11 @@
     [self initTF];
     [self curTimeValue];
 
+<<<<<<< HEAD
     NSString * text = [NSString stringWithFormat:@"clickSendContentTextForGroup至［Group:%@］,时间：%@", groupIdText,_curTimeV];
+=======
+    NSString * text = [NSString stringWithFormat:@"clickSendContentTextForGroup至［Group:%@］,时间：%@", userText,_curTimeV];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     
 //    JMSGTextContent * textContentGroup = [[JMSGTextContent alloc] initWithText:nil];//参数nil异常处理
         JMSGTextContent * textContentGroup = [[JMSGTextContent alloc] initWithText:text];
@@ -400,8 +434,12 @@
    _jmsgJMessage =  [JMSGMessage createGroupMessageWithContent:textContentGroup groupId:groupIdText  ];
     
 //    _jmsgJMessage =  [JMSGMessage createGroupMessageWithContent:textContentGroup groupId:groupIdText  ];//参数nil异常测试
+<<<<<<< HEAD
     NSString *fromName = [NSString stringWithFormat:@"发%@群聊文本的fromName",groupIdText];
     [_jmsgJMessage setFromName:fromName];
+=======
+
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     
     [JMSGMessage sendMessage:_jmsgJMessage];
     NSLog(@"－－－－－－－－clickSendContentTextForGroup:%@",text);
@@ -425,16 +463,24 @@
     [ self initTF];
     [self curTimeValue];
     
+<<<<<<< HEAD
     NSString * text = [NSString stringWithFormat:@"-clickSendImageContentForGroup至［群:%@］,时间：%@", groupIdText,_curTimeV];
+=======
+    NSString * text = [NSString stringWithFormat:@"-clickSendImageContentForGroup至［user:%@］,时间：%@", userText,_curTimeV];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:text,@"567890",nil];
     
     JMSGCustomContent * customContenGroup = [[JMSGCustomContent alloc] initWithCustomDictionary:dictionary];
     [customContenGroup addStringExtra:@"-clickSendImageContentForGroup value" forKey:@"clickSendImageContentForGroup-string key"];
+<<<<<<< HEAD
     
     _jmsgJMessage =  [JMSGMessage createGroupMessageWithContent:customContenGroup groupId:groupIdText];
     NSString *fromName = [NSString stringWithFormat:@"发%@群聊custom的fromName",groupIdText];
     [_jmsgJMessage setFromName:fromName];
     
+=======
+    _jmsgJMessage =  [JMSGMessage createGroupMessageWithContent:customContenGroup groupId:groupIdText];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     [JMSGMessage sendMessage:_jmsgJMessage];
     
     NSLog(@"－－－－－－－－clickSendCustomContentForGroup:%@",text);
@@ -452,7 +498,11 @@
 -(void)keyboardHide:(UITapGestureRecognizer*)tap{
     [self.userTF resignFirstResponder];
     [self.groupIdTF resignFirstResponder];
+<<<<<<< HEAD
     [self.fileUrlTF resignFirstResponder];
+=======
+    
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     [self.appkeyTF resignFirstResponder];
     
 }
@@ -463,11 +513,14 @@
         userText =nil;
     }
     
+<<<<<<< HEAD
     self.fileUrlTF.enabled = YES;
     FileUrlString = self.fileUrlTF.text;
     fileUrl=[NSURL URLWithString:FileUrlString];
     
     
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     self.groupIdTF.enabled = YES;
     groupIdText = _groupIdTF.text;
     if([groupIdText  isEqual:@"nil"]){
@@ -542,7 +595,11 @@
     //    }
     
     //自定义事件代码
+<<<<<<< HEAD
     if(message.contentType == kJMSGContentTypeEventNotification){
+=======
+    if(message.contentType == 5){
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
         JMSGEventContent *eventContent = (JMSGEventContent *)message.content;
         //获取发起事件的用户名
         NSString *fromUsername = [eventContent getEventFromUsername];
@@ -582,13 +639,17 @@
                 
             default:
                 jmsgAlertText = [NSString stringWithFormat:@"未知群事件：%ld",eventType];
+<<<<<<< HEAD
                 
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                 [self showAlert:jmsgAlertText];
                 
         }
         return;
     }
     
+<<<<<<< HEAD
 
     
     if(message.contentType == kJMSGContentTypeFile){
@@ -673,6 +734,8 @@
         
     }
     
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     NSLog(@"－－－\n 快速发送消息onReceiveMessage，收到消息成功！messge：%@",message);
     jmsgAlertText = [NSString stringWithFormat:@"收到消息！\n%@",message];
     [self showAlert:jmsgAlertText];
@@ -707,6 +770,7 @@
     
 }
 
+<<<<<<< HEAD
 
 -(void)onReceiveNotificationEvent:(JMSGNotificationEvent *)event{
     JMSGNotificationEvent *nEvent = event;
@@ -781,6 +845,8 @@
 //    
 //}
 
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 -(void)onConversationChanged:(JMSGConversation *)conversation{
     NSLog(@"---快速发送消息---onConversationChanged:%@\n",conversation);
 }
@@ -830,9 +896,15 @@
             case 1:
             {
                 [self initTF];
+<<<<<<< HEAD
 //                  [JMSGMessage sendSingleVoiceMessage:nil voiceDuration:nil toUser:userText]; //nil异常测试
 
                   [JMSGMessage sendSingleVoiceMessage:voicePathNSData voiceDuration:voiceDurationNSNumber toUser:userText];
+=======
+                  [JMSGMessage sendSingleVoiceMessage:nil voiceDuration:nil toUser:userText]; //nil异常测试
+
+//                  [JMSGMessage sendSingleVoiceMessage:voicePathNSData voiceDuration:voiceDurationNSNumber toUser:userText];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                 NSLog(@"----- voiceCase:%d,  \n  [JMSGMessage sendSingleVoiceMessage:voicePathNSData voiceDuration:voiceDurationNSNumber toUser:userText]",voiceCase);
 
             }
@@ -840,9 +912,15 @@
             case 2:{
                 [self initTF];
                 
+<<<<<<< HEAD
 //                [JMSGMessage sendSingleVoiceMessage:nil voiceDuration:nil toUser:userText appKey:appkeyText];//nil异常测试
 
                 [JMSGMessage sendSingleVoiceMessage:voicePathNSData voiceDuration:voiceDurationNSNumber toUser:userText appKey:appkeyText];
+=======
+                [JMSGMessage sendSingleVoiceMessage:nil voiceDuration:nil toUser:userText appKey:appkeyText];//nil异常测试
+
+//                [JMSGMessage sendSingleVoiceMessage:voicePathNSData voiceDuration:voiceDurationNSNumber toUser:userText appKey:appkeyText];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                 
   NSLog(@"-----voiceCase:%d,  \n [JMSGMessage sendSingleVoiceMessage:voicePathNSData voiceDuration:voiceDurationNSNumber toUser:userText appKey:appkeyText];",voiceCase);
             }
@@ -850,8 +928,15 @@
             case 3:
             {                [self initTF];
 
+<<<<<<< HEAD
 //                [JMSGMessage sendGroupVoiceMessage:nil voiceDuration:nil toGroup:groupIdText];//参数nil的异常测试
                 [JMSGMessage sendGroupVoiceMessage:voicePathNSData voiceDuration:voiceDurationNSNumber toGroup:groupIdText];
+=======
+                [JMSGMessage sendGroupVoiceMessage:nil voiceDuration:nil
+                                           toGroup:groupIdText];//参数nil的异常测试
+//                [JMSGMessage sendGroupVoiceMessage:voicePathNSData voiceDuration:voiceDurationNSNumber
+//                                           toGroup:groupIdText];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                 NSLog(@"-----voiceCase:%d,/n[JMSGMessage sendGroupVoiceMessage:voicePathNSData voiceDuration:voiceDurationNSNumber",voiceCase);
 
             }
@@ -863,6 +948,7 @@
                 [self curTimeValue];
 
                 NSString * singleContent = [NSString stringWithFormat:@"发送语音至［user:%@］,时间：%@", userText,_curTimeV];
+<<<<<<< HEAD
                 
 //                  JMSGVoiceContent *sVoiceContent = [[JMSGVoiceContent alloc] initWithVoiceData:nil voiceDuration:nil];//参数为nil的异常测试
                 
@@ -874,6 +960,14 @@
                 NSString *fromName = [NSString stringWithFormat:@"给%@发单聊语音的fromName",groupIdText];
                 [singleContentMessage setFromName:fromName];
                 
+=======
+                  JMSGVoiceContent *sVoiceContent = [[JMSGVoiceContent alloc] initWithVoiceData:nil voiceDuration:nil];//参数为nil的异常测试
+                
+//                JMSGVoiceContent *sVoiceContent = [[JMSGVoiceContent alloc] initWithVoiceData:voicePathNSData voiceDuration:voiceDurationNSNumber];
+                
+                [sVoiceContent addStringExtra:singleContent  forKey:@"send voice"];
+                JMSGMessage * singleContentMessage =    [JMSGMessage createSingleMessageWithContent:sVoiceContent username:userText];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                 [JMSGMessage sendMessage:singleContentMessage];
                 NSLog(@"-----voiceCase:%d,\n createSingleMessageWithContent- JMSGVoiceContent!",voiceCase);
 
@@ -886,6 +980,7 @@
                 [self curTimeValue];
 
                 NSString * groupContent = [NSString stringWithFormat:@"发送语音至［user:%@］,时间：%@", userText,_curTimeV];
+<<<<<<< HEAD
 //                 JMSGVoiceContent *gVoiceContent = [[JMSGVoiceContent alloc] initWithVoiceData:nil voiceDuration:nil];//参数nil的异常测试
                 
                 JMSGVoiceContent *gVoiceContent = [[JMSGVoiceContent alloc] initWithVoiceData:voicePathNSData voiceDuration:voiceDurationNSNumber];
@@ -894,6 +989,14 @@
                 JMSGMessage * groupContentMessage =    [JMSGMessage createGroupMessageWithContent:gVoiceContent groupId:groupIdText];
                 NSString *fromName = [NSString stringWithFormat:@"给%@发群聊语音的fromName",groupIdText];
                 [groupContentMessage setFromName:fromName];
+=======
+                 JMSGVoiceContent *gVoiceContent = [[JMSGVoiceContent alloc] initWithVoiceData:nil voiceDuration:nil];//参数nil的异常测试
+                
+//                JMSGVoiceContent *gVoiceContent = [[JMSGVoiceContent alloc] initWithVoiceData:voicePathNSData voiceDuration:voiceDurationNSNumber];
+                
+                [gVoiceContent addStringExtra:groupContent  forKey:@"send voice"];
+                JMSGMessage * groupContentMessage =    [JMSGMessage createGroupMessageWithContent:gVoiceContent groupId:groupIdText];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                 [JMSGMessage sendMessage:groupContentMessage];
                 NSLog(@"-----createGroupMessageWithContent －－JMSGVoiceContent!");
 
@@ -929,6 +1032,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+<<<<<<< HEAD
 - (IBAction)clickSendSingleFileMsg:(id)sender {
      [self initTF];
    [ self curTimeValue];
@@ -1265,4 +1369,7 @@
 {
     NSLog(@"error:%@",error);
 }
+=======
+
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 @end

@@ -19,7 +19,11 @@
     NSString *messageDelegate;
     
     NSString * alertText;
+<<<<<<< HEAD
     NSData *picData;
+=======
+
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 //    NSArray* memberArray;
     
     
@@ -31,7 +35,11 @@
 @property (strong,nonatomic)JMSGMessage *groupJMSGMessage;
 @property (strong,nonatomic)JMSGImageContent *groupJMSGImageContent;
 @property (nonatomic, strong) JMSGMessage * message;
+<<<<<<< HEAD
 @property (nonatomic, strong) NSTimer * timer;
+=======
+
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 
 
 @end
@@ -431,6 +439,7 @@
 }
 
 - (IBAction)clickSendGroupTextMsg:(id)sender {
+<<<<<<< HEAD
     i = 1;
             [JMessage removeAllDelegates];
             [JMessage addDelegate:self withConversation:nil];
@@ -471,6 +480,49 @@
         }
         
     }];
+=======
+    sendGroupMsgTimesInt = 1;
+    [self initTF];
+
+//    [JMSGConversation createGroupConversationWithGroupId:groupIDTextStr completionHandler:^(id resultObject, NSError *error) {
+//        if (error == nil) {
+//            NSLog(@"------------与 %@的会话创建成功！error:%@ , result: %@ ",groupIDTextStr , error, resultObject);
+//            _groupConversation = resultObject;
+//            
+            [JMessage removeAllDelegates];
+            [JMessage addDelegate:self withConversation:nil];
+//            NSLog(@"-------Send grounp Text:removeAllDelegates，addDelegate：nil");
+//
+            for (int i =1; i <= sendGroupMsgTimesInt ; i++) {
+    
+                [self curTimeValue];
+    
+                
+                NSString *sendContent = [NSString stringWithFormat:@"%@:－－%d－－%@ - %@",groupIDTextStr,i,sendGroupMSGText,curTime];
+                NSLog(@"-----------------sendContent:%@",sendContent);
+                
+                JMSGTextContent *textContent = [[JMSGTextContent alloc] initWithText:sendContent];
+                
+                [textContent addStringExtra:@"fsdakljfsk-ljklfjd-klf" forKey:@"statusId"];
+//                [textContent addStringExtra:@"http://image.7gyou.com/status/2016" forKey:@"statusImg"];
+                // 不关注会话的情况
+                JMSGMessage *message = [JMSGMessage createGroupMessageWithContent:textContent groupId:groupIDTextStr  ];
+                NSLog(@"------------clickSendGroupTextMsg-----message:%@",message);
+
+                [JMSGMessage sendMessage:message];
+
+//                [JMSGMessage sendGroupTextMessage:sendContent toGroup:groupIDTextStr  ];
+                [NSThread sleepForTimeInterval:1];
+            }
+        
+//        }
+//        else{
+//            NSLog(@"------------与 %@的会话创建失败！error ： %@ ,Result: %@",groupIDTextStr,error,resultObject );
+    
+//        }
+//    
+//    }];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 
     if (sendGroupMsgTimesInt == i) {
         [_timer invalidate];
@@ -492,6 +544,7 @@
     [JMessage removeAllDelegates];
     [JMessage addDelegate:self withConversation:nil];
     NSLog(@"------removeAllDelegates，addDelegate：nil");
+<<<<<<< HEAD
   
     _timer =   [NSTimer scheduledTimerWithTimeInterval:1.5//单位秒
                                                 target:self
@@ -501,6 +554,38 @@
     
 
     
+=======
+
+    [JMSGConversation createGroupConversationWithGroupId:groupIDTextStr completionHandler:^(id resultObject, NSError *error) {
+        if (error == nil) {
+            [self initTF];
+            NSLog(@"------------与 %@的会话创建成功！",groupIDTextStr );
+            _groupConversation = resultObject;
+
+
+            for (int i =1; i <= sendGroupMsgTimesInt; i++) {
+                [self curTimeValue];
+                NSString *sendContent = [NSString stringWithFormat:@"%@: －－%d－－%@ - %@",groupIDTextStr,i,sendGroupMSGText,curTime];
+                NSLog(@"-----------------send group Image to：%@",sendContent);
+                [JMSGMessage sendGroupImageMessage:picData toGroup:groupIDTextStr];
+                
+                sleep(200);
+                _groupJMSGImageContent.uploadHandler = ^(float percent, NSString *msgID){
+                  
+                            NSString *percentS =  [NSString stringWithFormat:@"%d%%",(int)(percent*100)];
+                            NSLog(@"----------------send group image progress : %@", percentS);
+                            };
+                }
+            
+            }
+        else{
+            NSLog(@"------------与 %@的会话创建失败！error ： %@ ,Result: %@",groupIDTextStr,error,resultObject );
+
+        }
+        
+    }];
+
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 }
 
 - (IBAction)clickSendGroupImageMsg:(id)sender {
@@ -541,7 +626,9 @@
 
 
 -(void)onReceiveMessage:(JMSGMessage *)message error:(NSError *)error{
+    _groupJMSGMessage = message;
     if (error !=nil) {
+<<<<<<< HEAD
         NSLog(@"－－－\n 群聊--onReceiveMessage，收到消息异常：%@",error);
         
         return;
@@ -554,6 +641,19 @@
     
     //自定义事件代码
     if(message.contentType == kJMSGContentTypeEventNotification){
+=======
+        NSLog(@"-------grounp －onReceiveMessage收到群消息,--error：%@,---message:%@",error,message);
+        messageDelegate = [NSString stringWithFormat:@"%@",message];
+        
+        NSString * recMessge = [NSString stringWithFormat:@"------grounp--onReceiveMessage:%@",message];
+        [_covAllShowTV setText:recMessge];
+        
+        return;
+
+    }
+    //自定义事件代码
+    if(message.contentType == 5){
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
         JMSGEventContent *eventContent = (JMSGEventContent *)message.content;
         //获取发起事件的用户名
         NSString *fromUsername = [eventContent getEventFromUsername];
@@ -563,6 +663,7 @@
         //根据事件类型，定制相应描述（以事件类型: 添加新成员为例子）
         long eventType = eventContent.eventType;
         NSLog(@"－－－\n eventType:%ld,\nfromUsername：%@,\ntoUsernameList:%@",eventType,fromUsername,toUsernameList);
+<<<<<<< HEAD
         
         switch(eventType)
         {
@@ -593,10 +694,44 @@
                 
             default:
                 NSLog(@"--%@", [NSString stringWithFormat:@"未知群事件：%ld",eventType]);
+=======
+
+        switch(eventType)
+        {
+            case 8:
+                alertText = [NSString stringWithFormat:@"[%@]创建了群，群成员有:%@",fromUsername,[toUsernameList componentsJoinedByString:@","]];
+                [self showAlert:alertText];
+                break;
+                
+            case 9:
+                alertText = [NSString stringWithFormat:@"[%@]退出了群",fromUsername];
+                [self showAlert:alertText];
+                break;
+                
+            case 10:
+                alertText = [NSString stringWithFormat:@"[%@ ]邀请了［%@］进群",fromUsername,[toUsernameList componentsJoinedByString:@","]];
+                [self showAlert:alertText];
+                break;
+                
+            case 11:
+                alertText = [NSString stringWithFormat:@"[%@ ]把［%@］移出了群",fromUsername,[toUsernameList componentsJoinedByString:@","]];
+                [self showAlert:alertText];
+                break;
+                
+            case 12:
+                alertText = [NSString stringWithFormat:@"[%@ ]更新了群信息",fromUsername];
+                [self showAlert:alertText];
+                break;
+                
+            default:
+                alertText = [NSString stringWithFormat:@"未知群事件：%ld",eventType];
+                [self showAlert:alertText];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                 
         }
         return;
     }
+<<<<<<< HEAD
     
     if(message.contentType == kJMSGContentTypeFile){
         [(JMSGFileContent * )message.content fileData:^(NSData *data, NSString *objectId, NSError *error) {
@@ -619,10 +754,18 @@
     
     NSLog(@"－－－\n群聊-onReceiveMessage，收到消息成功！messge：%@",message);
     
+=======
+
+    NSLog(@"-----grounp－onReceiveMessage收到群消息：%@",message);
+    
+    NSString * recMessge = [NSString stringWithFormat:@"------grounp--onReceiveMessage:\n%@",message];
+    [_covAllShowTV setText:recMessge];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     
 }
 
 
+<<<<<<< HEAD
 -(void)onReceiveNotificationEvent:(JMSGNotificationEvent *)event{
     JMSGNotificationEvent *nEvent = event;
     NSLog(@"---------Group--onReceiveNotificationEvent收到 通知事件");
@@ -688,6 +831,8 @@
             break;
     }
 }
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 -(void)onSendMessageResponse:(JMSGMessage *)message error:(NSError *)error{
     if (error !=nil) {
         NSLog(@"------grounp---onSendMessageResponse发群消息,--error：\n%@,\n---message:%@",error,message);

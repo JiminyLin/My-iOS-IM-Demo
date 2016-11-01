@@ -130,6 +130,7 @@ NSString * targetAppkeyStr = nil;
             self.TV_resultShow.text = getStrideAppUsersInfo;
         }
     }];
+<<<<<<< HEAD
 }
 
 - (IBAction)clickSendStrideAppTextMsg:(id)sender {
@@ -211,6 +212,89 @@ _changePwConversation = [JMSGConversation singleConversationWithUsername:user1St
     NSLog(@"----change password page，获取跨应用Appkey(%@)下用户（%@）的会话：%@\n",targetAppkeyStr,user1Str,_changePwConversation);
 }
 
+=======
+}
+
+- (IBAction)clickSendStrideAppTextMsg:(id)sender {
+    [self curTimeValue];
+//    NSString *sendContent = [NSString stringWithFormat:@"%@- %@,appkey:%@\n",user1Str,curTimeChangePassword,targetAppkeyStr];
+    //
+    NSString *convText= [NSString stringWithFormat:@"要发送跨应用的文本内容。%@",curTimeChangePassword];
+    JMSGTextContent * convTextContent = [[JMSGTextContent alloc] initWithText:convText];
+    [convTextContent addStringExtra:@"cov-Text-string value" forKey:@"cov-Text-string key"];
+    _changePwJMessage = [_changePwConversation createMessageWithContent:convTextContent];
+    [_changePwConversation sendMessage:_changePwJMessage];
+
+//              [_changePwConversation sendTextMessage:sendContent];
+    NSLog(@"----_changePwConversation:%@",_changePwConversation);
+//           NSLog(@"----修改密码页面，给Appkey(%@)的用户(%@)发送文本消息:%@\n",targetAppkeyStr,user1Str,sendContent);
+    
+}
+
+//调用相册
+-(void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    [self curTimeValue];
+    
+
+    //先把图片转成NSData（注意图片的格式）
+    UIImage* image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+    NSData *picData = UIImagePNGRepresentation(image);;
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [JMessage removeAllDelegates];
+    [JMessage addDelegate:self withConversation:nil];
+    NSLog(@"-----发送图片页面添加了delegate");
+    
+    [_changePwConversation sendImageMessage:picData];
+//    [JMSGMessage sendSingleImageMessage:picData toUser:user1Str];//调用单聊发图接口发送从相册里面选择的图片
+}
+- (IBAction)clickSendStrideAppImageMsg:(id)sender {
+    //打开显示相册控件
+    UIImagePickerController *imgController = [[UIImagePickerController alloc]init];
+    imgController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imgController.delegate = self;
+    [self presentViewController:imgController animated:YES completion:NULL];
+    
+    return;
+}
+- (IBAction)clickSendStrideAppCustom:(id)sender {
+    [self curTimeValue];
+    NSDictionary *dictionary  = @{@"d":@"g",@"y66":@"sfjhdsjh"};
+//     NSDictionary *dictionary  = [[NSDictionary alloc] initWithObjectsAndKeys:@"",nil,nil];
+    
+    JMSGCustomContent *strideAppCustomContent = [[JMSGCustomContent alloc] initWithCustomDictionary:dictionary];
+        NSString *sendCustomContent = [NSString stringWithFormat:@"%@- %@,to appkey:%@\n",user1Str,curTimeChangePassword,targetAppkeyStr];
+    JMSGMessage *cutMessage = [_changePwConversation createMessageWithContent:strideAppCustomContent];
+    [strideAppCustomContent setContentText:sendCustomContent];
+    [strideAppCustomContent addObjectValue:@"custom key1" forKey:@"custom value 1"];
+    [strideAppCustomContent addStringExtra:@"addStringExtra for value1" forKey:@"addStringExtra for key 1"];
+
+    [_changePwConversation sendMessage:cutMessage];
+
+}
+
+- (IBAction)clickDelStrideAppConversation:(id)sender {
+    self.TF_user1.enabled = YES;
+    user1Str = self.TF_user1.text;
+    self.TF_targetAppkey.enabled = YES;
+    targetAppkeyStr = self.TF_targetAppkey.text;
+    
+    [JMSGConversation deleteSingleConversationWithUsername:user1Str appKey:targetAppkeyStr];
+    NSLog(@"----删除appkey（%@）下用户（%@）的会话\n",targetAppkeyStr,user1Str);
+}
+
+- (IBAction)clickGetStrideAppUserConversation:(id)sender {
+    
+    self.TF_user1.enabled = YES;
+    user1Str = self.TF_user1.text;
+    self.TF_targetAppkey.enabled = YES;
+    targetAppkeyStr = self.TF_targetAppkey.text;
+_changePwConversation = [JMSGConversation singleConversationWithUsername:user1Str appKey:targetAppkeyStr];
+    
+    
+    NSLog(@"----change password page，获取跨应用Appkey(%@)下用户（%@）的会话：%@\n",targetAppkeyStr,user1Str,_changePwConversation);
+}
+
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 - (IBAction)clickChangePassword:(id)sender {
     self.oldPassword.enabled =YES;
     NSString *oldPsw = self.oldPassword.text;
@@ -315,13 +399,18 @@ _changePwConversation = [JMSGConversation singleConversationWithUsername:user1St
         StrideAppMessage = [NSString stringWithFormat:@" 收到消息: %@，error%@\n",message,error];
         self.TV_resultShow.text =  StrideAppMessage;
 
+<<<<<<< HEAD
         
+=======
+        return;
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     }else{
         NSLog(@"--------[message toJsonString]:%@",[message toJsonString]) ;
 
         StrideAppMessage = [NSString stringWithFormat:@" 收到消息: %@\n",message];
         self.TV_resultShow.text =  StrideAppMessage;
         _changePwJMessage =  message;
+<<<<<<< HEAD
 
         NSLog(@"--ChangePasswordViewController---onReceiveMessage收到消息：%@\n",message);
         
@@ -405,6 +494,21 @@ _changePwConversation = [JMSGConversation singleConversationWithUsername:user1St
     
     }
 
+=======
+
+        NSLog(@"--ChangePasswordViewController---onReceiveMessage收到消息：%@\n",message);
+        
+        NSLog(@"---ChangePasswordViewController---_myJMSGMessage.contentType: %ld, _myJMSGMessage.content:%@\n",(long)_changePwJMessage.contentType,_changePwJMessage.content) ;
+        
+        
+//        NSLog(@"--ChangePasswordViewController---onReceiveMessage收到消息：%@\n",[_changePwJMessage ]);
+
+//        NSLog(@"---ChangePasswordViewController--判断本消息的fromAppKey(%@)是否为当前集成使用的appkey：%d,",_changePwJMessage.fromAppKey,[JMessage isMainAppKey:_changePwJMessage.fromAppKey]);
+
+    }
+    }
+
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 -(void)onSendMessageResponse:(JMSGMessage *)message error:(NSError *)error{
     if (error !=nil) {
 //        NSLog(@"------ChangePasswordViewController-onSendMessageResponse发消息失败！！from appkey(%@),targetAppkey(%@),--error：%@,---message:%@\n",_changePwJMessage.fromAppKey,_changePwJMessage.targetAppKey,error,message);
@@ -421,6 +525,7 @@ _changePwConversation = [JMSGConversation singleConversationWithUsername:user1St
     }
 }
 
+<<<<<<< HEAD
 
 
 -(void)onReceiveNotificationEvent:(JMSGNotificationEvent *)event{
@@ -489,6 +594,8 @@ _changePwConversation = [JMSGConversation singleConversationWithUsername:user1St
     }
 }
 
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 -(void)onReceiveMessageDownloadFailed:(JMSGMessage *)message{
     
     NSLog(@"-----ChangePasswordViewController--onReceiveMessageDownloadFailed收到消息下载失败,----message:%@\n",message);
@@ -523,6 +630,7 @@ _changePwConversation = [JMSGConversation singleConversationWithUsername:user1St
     self.TV_resultShow.text =  StrideAppMessage;
 }
 
+<<<<<<< HEAD
 
 //220b90及之前的版本接收好友相关事件的方法
 //-(void)onFriendChanged:(JMSGFriendEventContent *)event{
@@ -532,6 +640,8 @@ _changePwConversation = [JMSGConversation singleConversationWithUsername:user1St
 //    
 //}
 
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

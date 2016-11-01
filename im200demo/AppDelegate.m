@@ -9,16 +9,23 @@
 #import "AppDelegate.h"
 #import <JMessage/JMessage.h>
 #import <AdSupport/AdSupport.h>
+<<<<<<< HEAD
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
 #endif
 
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 
 
 @interface AppDelegate () <JMessageDelegate>
 @property (strong,nonatomic) JMSGUser *myJMSGUser;
 @property(strong,nonatomic)JMSGConversation * myJMSGConversation;
+<<<<<<< HEAD
 @property (nonatomic, strong) UNUserNotificationCenter *center;
+=======
+
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 
 @end
 
@@ -28,6 +35,7 @@ NSArray *_delegateCovList;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSString * appkey = @"";
+<<<<<<< HEAD
     
     NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     NSLog(@"--------IDFA:%@",advertisingId);
@@ -42,6 +50,11 @@ NSArray *_delegateCovList;
         _center.delegate = self;
 
     }
+=======
+
+    NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+  
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
         //可以添加自定义categories
         [JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
@@ -56,6 +69,7 @@ NSArray *_delegateCovList;
                                                           UIRemoteNotificationTypeAlert)
                                               categories:nil];
     }
+<<<<<<< HEAD
     [JPUSHService setupWithOption:launchOptions appKey:appkey
                           channel:@"lingz im 213channel"
                  apsForProduction:NO
@@ -79,6 +93,16 @@ NSArray *_delegateCovList;
 
     
 //    [JMessage  setIsGlobalNoDisturb:YES handler:^(id resultObject, NSError *error) {
+=======
+    
+//    [JPUSHService setupWithOption:launchOptions appKey:appkey
+//                          channel:@"im 213channel"
+//                 apsForProduction:NO
+//            advertisingIdentifier:advertisingId];
+    [JMessage addDelegate:self  withConversation:nil];
+
+    [JMessage setupJMessage:launchOptions appKey:appkey channel:@"im 213channel" apsForProduction:YES category:nil];///    [JMessage  setIsGlobalNoDisturb:YES handler:^(id resultObject, NSError *error) {
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 //        if (error != nil){
 //            NSLog(@"------set setIsGlobalNoDisturb:YES  fail:%@ ",error);
 //            return ;
@@ -145,8 +169,36 @@ NSArray *_delegateCovList;
                           name:kJPFNetworkDidLoginNotification
                         object:nil];
 
+<<<<<<< HEAD
 }
 
+
+- (void)networkDidSetup:(NSNotification *)notification {
+    NSLog(@"－已连接");
+}
+
+- (void)networkDidClose:(NSNotification *)notification {
+    NSLog(@"－未连接");
+    [self showAlert:@"JPush长连接 未连接！"];
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
+    
+}
+
+- (void)networkDidRegister:(NSNotification *)notification {
+    NSLog(@"%@", [notification userInfo]);
+    
+    NSLog(@"－已注册");
+    
+}
+- (void)networkDidLogin:(NSNotification *)notification {
+    
+    NSLog(@"－已登录");
+    NSLog(@"－get RegistrationID: %@",[JPUSHService registrationID]);
+    NSString * loginText =[ NSString stringWithFormat:@"－JPush 已登录！rid: %@",[JPUSHService registrationID]];
+    [self showAlert:loginText];
+
+}
 
 - (void)networkDidSetup:(NSNotification *)notification {
     NSLog(@"－已连接");
@@ -240,13 +292,18 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     [JMSGConversation allConversations:^(id resultObject, NSError *error) {
         if (error != nil) {
+<<<<<<< HEAD
             NSLog(@"\n－－applicationWillResignActive当前登录用户所有会话获取出错！\n error:%@ ,resultObject:%@",error,resultObject);
+=======
+            NSLog(@"\n－－applicationWillResignActive当前登录用户会话获取出错！\n error:%@ ,resultObject:%@",error,resultObject);
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
             return ;
         }
         int AllCovUnReadCount = 0;
         _delegateCovList = resultObject;
         for (int i =0; i< _delegateCovList.count; i++) {
             _myJMSGConversation = _delegateCovList[i];
+<<<<<<< HEAD
             
             JMSGMessage *convLatestMessage  = _myJMSGConversation.latestMessage;
             
@@ -300,6 +357,11 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
             NSLog(@"---------delegateCovList[%d],{\n未读数：%d，具体：\n:%@\n}",i,covUnreadCount,_myJMSGConversation);
             NSLog(@"---------delegateCovList[%d],{\n最新一条消息:%@\n}",i,_myJMSGConversation.latestMessage);
 
+=======
+            int covUnreadCount = [_myJMSGConversation.unreadCount intValue];
+            NSLog(@"---------delegateCovList[%d],{\n未读数：%d，具体：\n:%@\n}",i,covUnreadCount,_myJMSGConversation);
+            
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
             AllCovUnReadCount = AllCovUnReadCount + covUnreadCount ;
             
         }

@@ -7,7 +7,11 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
+<<<<<<< HEAD
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+=======
+	<string></string>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -27,6 +31,7 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+<<<<<<< HEAD
 	<key>NSCameraUsageDescription</key>
 	<string>相机啊！！！！！</string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -39,6 +44,11 @@
 	<true/>
 	<key>UIBackgroundModes</key>
 	<array>
+=======
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

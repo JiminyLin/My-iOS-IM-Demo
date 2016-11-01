@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FiendTestViewController : UIViewController
+@interface FriendTestViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *userTV;
 @property (weak, nonatomic) IBOutlet UITextField *noteNameTV;
 @property (weak, nonatomic) IBOutlet UITextField *noteMsgTV;

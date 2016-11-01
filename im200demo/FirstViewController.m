@@ -12,8 +12,11 @@
 @interface FirstViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate,JMessageDelegate>
 @property (nonatomic ,retain)JMSGUser *myJMSGUser;
 @property (nonatomic ,retain)JMSGMessage *myJMSGMessage;
+<<<<<<< HEAD
 //@property (strong ,nonatomic )JMSGFriendEventContent *firstJMSGFriendEventContent;
 
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 
 @end
 
@@ -303,7 +306,11 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
             //通过这个这个实例化的JMSGUser对象去获取当前登录用户的头像的缩略图
             [_myJMSGUser thumbAvatarData:^(NSData *data, NSString *objectId, NSError *error) {
                 if (error == nil) {
+<<<<<<< HEAD
                     NSLog(@"------获取我的大图成功！");//－－－data:%@--objectId:%@",data,objectId);
+=======
+                    NSLog(@"------获取我的大图成功！－－－data:%@--objectId:%@",data,objectId);
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                     self.showAvatarImage.image = [UIImage imageWithData:data];//把获取缩略图的方法得到的data赋值到image view展示
                 }
                 else{
@@ -529,6 +536,7 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
 }
 
 - (IBAction)clickGetMyInfo:(id)sender {
+<<<<<<< HEAD
 
     
     _myJMSGUser = [JMSGUser myInfo];
@@ -539,6 +547,21 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
 
 
   NSLog(@"------clickGetMyInfo－我的头像:%@", [JMSGUser myInfo].avatar) ;
+=======
+    UIUserNotificationSettings *uns = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound) categories: nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:uns];
+    NSLog(@"--clickGetMyInfo--再次注册apns！");
+    
+    _myJMSGUser = [JMSGUser myInfo];
+//    NSLog(@"-------clickGetMyInfo－get my info 的 appkey：%@",_myJMSGUser.appKey);
+    allResult = [NSString stringWithFormat:@"－-我的个人信息：%@",_myJMSGUser];
+    NSLog(@"------clickGetMyInfo－我的个人信息:%@",allResult) ;
+    
+//    [self showAlert:allResult];
+
+
+//  NSLog(@"------clickGetMyInfo－我的头像:%@", [JMSGUser myInfo].avatar) ;
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     [self.allResultTV setText:allResult];
     
     NSLog(@"----clickGetMyInfo－－当前登陆的用户的displayName：%@",[_myJMSGUser displayName]);
@@ -602,6 +625,7 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
 
 -(void)onReceiveMessage:(JMSGMessage *)message error:(NSError *)error{
     if (error !=nil) {
+<<<<<<< HEAD
         NSLog(@"－－－\n 主页--onReceiveMessage，收到消息异常：%@",error);
         
         return;
@@ -683,6 +707,64 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
     NSLog(@"－－－\n主页-onReceiveMessage，收到消息成功！messge：%@",message);
     
     
+=======
+        NSLog(@"------home－ -onReceiveMessage收到消息,--error：%@,---message:%@",error,message);
+        return;
+    }
+    //自定义事件代码
+    if(message.contentType == 5){
+        JMSGEventContent *eventContent = (JMSGEventContent *)message.content;
+        //获取发起事件的用户名
+        NSString *fromUsername = [eventContent getEventFromUsername];
+        //获取事件作用对象用户名列表
+        NSArray *toUsernameList = [eventContent getEventToUsernameList];
+        long eventType = eventContent.eventType;
+
+         NSLog(@"－－－\n eventType:%ld,\nfromUsername：%@,\ntoUsernameList:%@",eventType,fromUsername,toUsernameList);
+        //根据事件类型，定制相应描述（以事件类型: 添加新成员为例子）
+        switch(eventType)
+        {
+            case 8:
+                allResult = [NSString stringWithFormat:@"[%@]创建了群，群成员有:%@",fromUsername,[toUsernameList componentsJoinedByString:@","]];
+                [self showAlert:allResult];
+                break;
+                
+            case 9:
+                allResult = [NSString stringWithFormat:@"[%@]退出了群",fromUsername];
+                [self showAlert:allResult];
+                break;
+                
+            case 10:
+                allResult = [NSString stringWithFormat:@"[%@ ]邀请了［%@］进群",fromUsername,[toUsernameList componentsJoinedByString:@","]];
+                [self showAlert:allResult];
+                break;
+                
+            case 11:
+                allResult = [NSString stringWithFormat:@"[%@ ]把［%@］移出了群",fromUsername,[toUsernameList componentsJoinedByString:@","]];
+                [self showAlert:allResult];
+                break;
+                
+            case 12:
+                allResult = [NSString stringWithFormat:@"[%@ ]更新了群信息",fromUsername];
+                [self showAlert:allResult];
+                break;
+                
+            default:
+                allResult = [NSString stringWithFormat:@"未知群事件：%ld",eventType];
+                [self showAlert:allResult];
+                
+        }
+        return;
+    }
+
+    NSLog(@"--home---onReceiveMessage收到消息：%@",message);
+    _myJMSGMessage =  message;
+    allResult = [NSString stringWithFormat:@"收到消息：%@",message];
+    [self showAlert:allResult];
+//    NSLog(@"-----FirstViewController--onReceiveMessage: 收到消息的targetAppkey（%@）,fromAppkey（%@）",_myJMSGMessage.targetAppKey,_myJMSGMessage.fromAppKey) ;
+    
+//    NSLog(@"-----FirstViewController-判断本消息的fromAppKey(%@)是否为当前集成使用的appkey：%d,",_myJMSGMessage.fromAppKey,[JMessage isMainAppKey:_myJMSGMessage.fromAppKey]) ;
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 }
 
 -(void)onSendMessageResponse:(JMSGMessage *)message error:(NSError *)error{
@@ -699,6 +781,7 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
 //        NSLog(@"------home-onSendMessageResponse发消息成功！！！\nfrom appkey(%@),\ntargetAppkey(%@),\n--error：%@,\n---message:%@",_myJMSGMessage.fromAppKey,_myJMSGMessage.targetAppKey,error,_myJMSGMessage);
 
     }
+<<<<<<< HEAD
 }
 
 -(void)onReceiveNotificationEvent:(JMSGNotificationEvent *)event{
@@ -769,6 +852,8 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
     
     nEvent  = nil ;
     friendEvent = nil;
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 }
 
 -(void)onReceiveMessageDownloadFailed:(JMSGMessage *)message{

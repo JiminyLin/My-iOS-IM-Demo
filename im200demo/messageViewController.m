@@ -32,14 +32,21 @@
 @implementation messageViewController
 NSString *user1,*user2,*contentText,*curTime;
 NSInteger sendTimes;
+<<<<<<< HEAD
 int i ;
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 NSString *unReadCount;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"-------进入了 单聊 界面:messageViewController");
     
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
      //隐藏键盘，star
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardHide:)];
     //设置成NO表示当前控件响应后会传播到其他控件上，默认为YES。
@@ -202,7 +209,10 @@ NSString *unReadCount;
             [_textview setText:getUserInfo];
             
             _otherJMSGUser  = resultObject[0];
+<<<<<<< HEAD
             NSLog(@"------该用户的displayName：%@",_otherJMSGUser.displayName);
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 //            Boolean isEqualToUser=  [ myInfo isEqualToUser:_otherJMSGUser];
 //            NSLog(@"----isEqualToUser:%d",isEqualToUser);
             [_otherJMSGUser largeAvatarData:^(NSData *data, NSString *objectId, NSError *error) {
@@ -290,17 +300,29 @@ NSString *unReadCount;
 //    JMSGMessage *cutMessage = [_myJMSGConversation createMessageWithContent:customContent];
     
        JMSGMessage *cutMessage = [JMSGMessage createSingleMessageWithContent:customContent username:user1];
+<<<<<<< HEAD
 
        
        NSLog(@"-----单聊－clickSendCustomMSG-message:%@",cutMessage);
 
     [cutMessage setFromName:@"custom setFromName"];
+=======
+
+       
+       NSLog(@"-----单聊－clickSendCustomMSG-message:%@",cutMessage);
+
+    [cutMessage setFromName:@"custom setFromName :"];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     _myJMSGUser = [JMSGUser myInfo];
        
        [JMSGMessage sendMessage:cutMessage];
 //       [_myJMSGConversation sendMessage:cutMessage];
        NSLog(@"------发送的custom：%@",cutMessage);
 
+<<<<<<< HEAD
+=======
+//   }];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
  }
 
 -(void)repeatSendText{
@@ -328,12 +350,36 @@ NSString *unReadCount;
 
 - (IBAction)clickRepeatSendText:(id)sender {
     [self initUserContent];
+<<<<<<< HEAD
     i = 1;
     _timer =   [NSTimer scheduledTimerWithTimeInterval:1.5//单位秒
                                                 target:self
                                               selector:@selector(repeatSendText)
                                               userInfo:nil
                                                repeats:YES ];      //循环发送可以用这种方法， 这不会阻塞线程的， 更加符合实际情况
+=======
+    self.sendTimeTF.enabled =YES;
+    NSString *sendTimesString = self.sendTimeTF.text;
+    sendTimes = [sendTimesString integerValue];
+
+            for (int i = 1; i<=sendTimes; i++) {
+                [self initUserContent];//初始化本页面的文本框
+                [self curTimeValue];//获取一下当前时间
+                
+                _myJMSGUser =  [JMSGUser myInfo];
+                NSString *sendContent = [NSString stringWithFormat:@"本消息由[%@]发至[%@]:--%d--%@,%@",  [_myJMSGUser username],user1,i,contentText,curTime];//把用户输入的内容和
+                
+                
+                
+                [JMessage removeAllDelegates];
+                [JMessage addDelegate:self withConversation:nil];
+//                NSLog(@"-----循环发送按钮这里添加了delegate");
+                NSLog(@"------单聊－RepeatSendText，发送消息：%@",sendContent);
+                [JMSGMessage sendSingleTextMessage:sendContent toUser:user1];
+                sleep(1.5);
+
+            }
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 
 }
 
@@ -367,6 +413,7 @@ NSString *unReadCount;
 }
 - (IBAction)clickClearTV:(id)sender {
     [_textview setText:@"/"];
+<<<<<<< HEAD
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=NOTIFICATIONS_ID&&path=lingz.test01"]];
     NSLog(@"----applicationState:%ld",(long)[[UIApplication sharedApplication ] applicationState ]);
 //    int i = [[UIApplication sharedApplication ] applicationState ] ;
@@ -374,6 +421,8 @@ NSString *unReadCount;
 //    if (i ==  j) {
 //        
 //    }
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 
 
 }
@@ -397,6 +446,17 @@ NSString *unReadCount;
         self.unReadCountTF.enabled = YES;
         self.unReadCountTF.text =[NSString stringWithFormat:@"未读数：%@", [_myJMSGConversation unreadCount]];
         NSLog(@"----－－－messageViewControlle--clickClearReadCount-当前会话的未读数：%@",  _myJMSGConversation.unreadCount);
+<<<<<<< HEAD
+
+    }
+    else{
+        NSLog(@"-clickClearReadCount:尚未获取到会话!");
+        
+    }
+//    [_message updateFlag:@(1)];
+//    NSLog(@"----－－－当前flag：%@",  _message.flag);
+
+=======
 
     }
     else{
@@ -407,6 +467,108 @@ NSString *unReadCount;
 //    NSLog(@"----－－－当前flag：%@",  _message.flag);
 
 
+}
+
+-(void)onReceiveMessage:(JMSGMessage *)message error:(NSError *)error{
+    if (error!=nil) {
+        NSLog(@"---single--onReceiveMessage error is %@",error);
+    }else{
+        //自定义事件代码
+        if(message.contentType == 5){
+            JMSGEventContent *eventContent = (JMSGEventContent *)message.content;
+            //获取发起事件的用户名
+            NSString *fromUsername = [eventContent getEventFromUsername];
+            //获取事件作用对象用户名列表
+            NSArray *toUsernameList = [eventContent getEventToUsernameList];
+            
+            //根据事件类型，定制相应描述（以事件类型: 添加新成员为例子）
+            long eventType = eventContent.eventType;
+            NSLog(@"－－－\n eventType:%ld,\nfromUsername：%@,\ntoUsernameList:%@",eventType,fromUsername,toUsernameList);
+
+            switch(eventType)
+            {
+                case 8:
+                    singlePageAlertText = [NSString stringWithFormat:@"[%@]创建了群，群成员有:%@",fromUsername,[toUsernameList componentsJoinedByString:@","]];
+                    [self showAlert:singlePageAlertText];
+                    break;
+                    
+                case 9:
+                    singlePageAlertText = [NSString stringWithFormat:@"[%@]退出了群",fromUsername];
+                    [self showAlert:singlePageAlertText];
+                    break;
+                    
+                case 10:
+                    singlePageAlertText = [NSString stringWithFormat:@"[%@ ]邀请了［%@］进群",fromUsername,[toUsernameList componentsJoinedByString:@","]];
+                    [self showAlert:singlePageAlertText];
+                    break;
+                    
+                case 11:
+                    singlePageAlertText = [NSString stringWithFormat:@"[%@ ]把［%@］移出了群",fromUsername,[toUsernameList componentsJoinedByString:@","]];
+                    [self showAlert:singlePageAlertText];
+                    break;
+                    
+                case 12:
+                    singlePageAlertText = [NSString stringWithFormat:@"[%@ ]更新了群信息",fromUsername];
+                    [self showAlert:singlePageAlertText];
+                    break;
+                    
+                default:
+                    singlePageAlertText = [NSString stringWithFormat:@"未知群事件：%ld",eventType];
+                    [self showAlert:singlePageAlertText];
+                    
+            }
+            return;
+        }
+
+        
+    _message = message;
+        id MessageTarget = _message.target ;
+        if ([MessageTarget isKindOfClass:[JMSGUser class]]) {
+//            _myJMSGConversation=   [JMSGConversation singleConversationWithUsername:_message.fromUser.username appKey:_message.fromAppKey];
+            
+            NSString *onReceiveMessage = [NSString stringWithFormat:@"收到im消息：%@",message];
+            [_textview setText:onReceiveMessage];
+            unReadCount = [NSString stringWithFormat:@"未读数：%@",_myJMSGConversation.unreadCount];
+            self.unReadCountTF.enabled=YES;
+            self.unReadCountTF.text = unReadCount;
+            NSLog(@"----single---1onReceiveMessage :%@",message);
+
+            NSLog(@"----－－－2messageViewController-onReceiveMessage当前会话的未读数：%@",  _myJMSGConversation.unreadCount);
+            //        NSLog(@"----messageViewController－－－收到的消息转成jsonString：%@",  [_message toJsonString]);
+            
+            //    NSLog(@"--－－messageViewController－－isEqualToMessage:%d",[_myJMSGMessage isEqualToMessage:message]);
+            
+            //    NSLog(@"-----messageViewController--onReceiveMessage: 收到消息的targetAppkey（%@）,fromAppkey（%@）\n",_message.targetAppKey,_message.fromAppKey) ;
+            
+//            NSLog(@"-----3messageViewController-判断本消息的fromAppKey(%@)是否为当前集成使用的appkey：%d\n",message.fromAppKey,[JMessage isMainAppKey:_message.fromAppKey]) ;
+            return;
+        }
+        else  if ([MessageTarget isKindOfClass:[JMSGGroup class]]){
+            JMSGGroup * group = MessageTarget;
+            
+            _myJMSGConversation=   [JMSGConversation groupConversationWithGroupId: group.gid];
+            
+            NSLog(@"----single---1onReceiveMessage :%@",message);
+            NSString *onReceiveMessage = [NSString stringWithFormat:@"收到im消息：%@",message];
+            [_textview setText:onReceiveMessage];
+            unReadCount = [NSString stringWithFormat:@"未读数：%@",_myJMSGConversation.unreadCount];
+            self.unReadCountTF.enabled=YES;
+            self.unReadCountTF.text = unReadCount;
+            NSLog(@"----－－－2messageViewController-onReceiveMessage当前会话的未读数：%@",  _myJMSGConversation.unreadCount);
+            //        NSLog(@"----messageViewController－－－收到的消息转成jsonString：%@",  [_message toJsonString]);
+            
+            //    NSLog(@"--－－messageViewController－－isEqualToMessage:%d",[_myJMSGMessage isEqualToMessage:message]);
+            
+            //    NSLog(@"-----messageViewController--onReceiveMessage: 收到消息的targetAppkey（%@）,fromAppkey（%@）\n",_message.targetAppKey,_message.fromAppKey) ;
+            
+//            NSLog(@"-----3messageViewController-判断本消息的fromAppKey(%@)是否为当前集成使用的appkey：%d,\n",message.fromAppKey,[JMessage isMainAppKey:_message.fromAppKey]) ;
+            return;
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
+
+        }
+
+        }
+      
 }
 //
 //-(void)onReceiveMessage:(JMSGMessage *)message error:(NSError *)error{
@@ -599,7 +761,11 @@ NSString *unReadCount;
         return ;
     }
     _myJMSGMessage = message;
+<<<<<<< HEAD
     NSLog(@"\n-------single----im onSendMessageResponse 发送结果:%@",message);
+=======
+    NSLog(@"---single----im onSendMessageResponse 发送结果:%@",message);
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     NSString *onSendMessageResponse = [NSString stringWithFormat:@"发送im消息：%@",message];
 
     [_textview setText:onSendMessageResponse];

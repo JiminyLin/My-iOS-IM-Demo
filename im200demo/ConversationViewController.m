@@ -20,11 +20,14 @@
     NSString *_covShow;
     NSString *_covUnReadCount;
     NSNumber *_covUnreadCount_value;
+<<<<<<< HEAD
    
     NSString* filePath;
 
     NSData *sendNSData;
     NSData *receiverNSData;
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     
     NSArray *_covList;
     
@@ -66,6 +69,7 @@
     [self.view addSubview:_covAllShowTV];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"< 全平台" style:UIBarButtonItemStylePlain target:self action:@selector(morePage)];
 
+<<<<<<< HEAD
 
     
     //注册LocationManager
@@ -87,6 +91,9 @@
     }
 
     
+=======
+
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 }
 
 -(void)morePage{
@@ -150,6 +157,7 @@
 -(void)createSingleCovByUser{
     NSLog(@"---createSingleCovByUser");
     [self initTv];
+<<<<<<< HEAD
 //    for (int i =0; i <  2; i++) {
         [JMSGConversation createSingleConversationWithUsername:_covUserNameV completionHandler:^(id resultObject, NSError *error) {
             if (error != nil) {
@@ -167,6 +175,28 @@
                 [_covAllShowTV setText:_covShow];
        
         }];
+=======
+    [JMSGConversation createSingleConversationWithUsername:_covUserNameV completionHandler:^(id resultObject, NSError *error) {
+        if (error != nil) {
+//            [self getLastMsg];
+                       NSLog(@"--------创建与 %@  的会话失败！－－error：%@,---Result:%@",_covUserNameV,error,resultObject);
+            _covShow = [NSString stringWithFormat:@"--------创建与 %@  的会话失败，－－error：%@,---Result:%@",_covUserNameV,error,resultObject];
+            [_covAllShowTV setText:_covShow];
+            
+        }
+        else{
+            NSLog(@"--------创建与 %@  的会话成功！---Result:%@",_covUserNameV,resultObject);
+
+            _covConversation = resultObject;
+            [JMessage removeAllDelegates];
+            [JMessage addDelegate:self withConversation:nil];
+            
+             _covShow = [NSString stringWithFormat:@"--------创建与 %@  的会话成功！---Result:%@",_covUserNameV,resultObject];
+            [_covAllShowTV setText:_covShow];
+            
+        }
+    }];
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 
 //    }
    
@@ -643,6 +673,7 @@
 }
 
 -(void)onReceiveMessage:(JMSGMessage *)message error:(NSError *)error{
+<<<<<<< HEAD
     if (error !=nil) {
         NSLog(@"－－－\n cov--onReceiveMessage，收到消息异常：%@",error);
 
@@ -711,6 +742,25 @@
             
         }];
         
+=======
+    if (error==nil) {
+        _covJMessage = message;
+        NSLog(@"-－－ConversationViewController－－收到的消息是否属于当前会话：%d,－－cov:%@",  [_covConversation isMessageForThisConversation:_covJMessage],_covConversation);
+        
+        NSLog(@"------ConversationViewController--onReceiveMessage,--message:%@,\n－－收到的消息id:%@",_covJMessage,_covJMessage.msgId);
+        
+        _covShow = [NSString stringWithFormat:@"------cov--onReceiveMessage,--message:%@,－－error:%@",_covJMessage,error];
+        [_covAllShowTV setText:_covShow];
+        
+//        NSLog(@"-----ConversationViewController--onReceiveMessage: 收到消息的targetAppkey（%@）,fromAppkey（%@）\n",_covJMessage.targetAppKey,_covJMessage.fromAppKey) ;
+//        JMSGEventContent *myJMSGEvenContent ;
+        
+//        NSLog(@"-----判断本消息的fromAppKey(%@)是否为当前集成使用的appkey：%d,",_covJMessage.fromAppKey,[JMessage isMainAppKey:_covJMessage.fromAppKey]) ;
+
+    }
+    else{
+        NSLog(@"－－ConversationViewController－onReceiveMessage,收到消息的时候报错了，error:%@ ",error);
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     }
     
     if(message.contentType == kJMSGContentTypeLocation){
@@ -737,6 +787,20 @@
     _covUnReadCount = [NSString stringWithFormat:@"-----未读数：%ld",newCount];
     self.covUnreadCountLB.enabled =YES;
     [self.covUnreadCountLB setText:_covUnReadCount];
+}
+- (IBAction)clickClearTV:(id)sender {
+    self.covAllShowTV.text = @"--";
+    //测试代码，发送custom
+//    NSDictionary *dictionary  = [[NSDictionary alloc] initWithObjectsAndKeys:@"",nil,nil];
+//    
+//    JMSGCustomContent *strideAppCustomContent = [[JMSGCustomContent alloc] initWithCustomDictionary:dictionary];
+//    NSString *sendCustomContent = [NSString stringWithFormat:@"%@-%@\n",_covUserNameV,_curTimeV];
+//    JMSGMessage *cutMessage = [_covConversation createMessageWithContent:strideAppCustomContent];
+//    [strideAppCustomContent setContentText:sendCustomContent];
+//    [strideAppCustomContent addObjectValue:@"custom key1" forKey:@"custom value 1"];
+//    
+//    [_covConversation sendMessage:cutMessage];
+
 }
 
 //220b90及之前的220获取好友事件的方法
@@ -773,6 +837,7 @@
     [JMessage removeAllDelegates];
     [JMessage addDelegate:self withConversation:nil];
 }
+<<<<<<< HEAD
 
 - (IBAction)clickSendFileByConversation:(id)sender {
     covSendFileCase = 0;
@@ -790,6 +855,8 @@
     [JMessage addDelegate:self withConversation:nil];
     [self handleFile];
 
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
 
 }
 

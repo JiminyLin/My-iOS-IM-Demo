@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="49e-Tb-3d3">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="49e-Tb-3d3">
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -240,11 +244,14 @@
                                     <action selector="clickOpenAllMsgDisturb:" destination="9pv-A4-QxB" eventType="touchUpInside" id="lpQ-59-Wwd"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kre-R0-GF3">
                                 <rect key="frame" x="104" y="433" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -471,7 +478,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hXe-hm-gQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="-98" y="1395"/>
+=======
+            <point key="canvasLocation" x="366" y="977.99999999999989"/>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
         </scene>
         <!--群聊-->
         <scene sceneID="wg7-f3-ORb">
@@ -722,7 +733,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1319" y="406"/>
+=======
+            <point key="canvasLocation" x="413" y="350.99999999999994"/>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
         </scene>
         <!--好友-->
         <scene sceneID="te0-aQ-mmj">
@@ -732,6 +747,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pFz-9r-t5n">
                                 <rect key="frame" x="6" y="75" width="51" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -741,18 +757,50 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="hIi-nk-uv4">
                                 <rect key="frame" x="52" y="72" width="97" height="30"/>
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原密码:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hb5-sy-Haf">
+                                <rect key="frame" x="11" y="22" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新密码:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XLS-uL-bWJ">
+                                <rect key="frame" x="11" y="60" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="d2y-gp-3Go">
+                                <rect key="frame" x="62" y="20" width="158" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="nLF-Ch-fyN">
+                                <rect key="frame" x="62" y="58" width="158" height="30"/>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pK7-yj-4n8">
                                 <rect key="frame" x="157" y="70" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="add" backgroundImage="buttonBlue.png"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uIh-HF-uLK">
+                                <rect key="frame" x="228" y="20" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="修改密码" backgroundImage="buttonBlue.png"/>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                                 <connections>
                                     <action selector="clickAddFriend:" destination="EX1-0X-GIa" eventType="touchUpInside" id="RUc-Ca-If4"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="88q-B7-gol">
                                 <rect key="frame" x="213" y="69" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -857,10 +905,73 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="IxV-eh-T5P">
                                 <rect key="frame" x="73" y="142" width="213" height="30"/>
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppKey：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rpF-ra-fGD">
+                                <rect key="frame" x="11" y="134" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user1：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BGy-KJ-SMV">
+                                <rect key="frame" x="7" y="101" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Ycn-kE-9aD">
+                                <rect key="frame" x="65" y="97" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="PJ5-OW-Hx4">
+                                <rect key="frame" x="77" y="134" width="217" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BFh-hd-crm">
+                                <rect key="frame" x="11" y="195" width="68" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="发文本" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendStrideAppTextMsg:" destination="8f1-OL-NZt" eventType="touchUpInside" id="Q9M-bz-0sa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="11R-vb-VV9">
+                                <rect key="frame" x="87" y="192" width="71" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="发图片" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendStrideAppImageMsg:" destination="8f1-OL-NZt" eventType="touchUpInside" id="iJG-Gw-jsR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mkf-Fl-3fF">
+                                <rect key="frame" x="160" y="191" width="74" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="发Custom" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendStrideAppCustom:" destination="8f1-OL-NZt" eventType="touchUpInside" id="q1K-6T-FsV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iNH-ri-B8S">
+                                <rect key="frame" x="11" y="225" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="del会话" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickDelStrideAppConversation:" destination="8f1-OL-NZt" eventType="touchUpInside" id="BCN-Mw-J4T"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="N2n-gV-FhH">
+                                <rect key="frame" x="216" y="96" width="97" height="30"/>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yWl-ar-RVa">
                                 <rect key="frame" x="73" y="180" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1000,6 +1111,16 @@
                                     <action selector="clickGetStrideAppUserInfo:" destination="8f1-OL-NZt" eventType="touchUpInside" id="dWs-Gc-ILz"/>
                                 </connections>
                             </button>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="B2w-FJ-EZk">
+                                <rect key="frame" x="174" y="162" width="106" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="获取用户信息" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickGetStrideAppUserInfo:" destination="8f1-OL-NZt" eventType="touchUpInside" id="dWs-Gc-ILz"/>
+                                </connections>
+                            </button>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m7c-Pi-pRE">
                                 <rect key="frame" x="87" y="162" width="79" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1007,6 +1128,7 @@
                                 <connections>
                                     <action selector="clickGetStrideAppUserConversation:" destination="8f1-OL-NZt" eventType="touchUpInside" id="ypa-G2-XMy"/>
                                 </connections>
+<<<<<<< HEAD
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KdI-g3-66b">
                                 <rect key="frame" x="7" y="163" width="76" height="33"/>
@@ -1114,26 +1236,48 @@
                                 <rect key="frame" x="17" y="204" width="65" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="AllMSG" backgroundImage="buttonBlue.png"/>
+=======
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KdI-g3-66b">
+                                <rect key="frame" x="7" y="163" width="76" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="创建会话" backgroundImage="buttonBlue.png"/>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                                 <connections>
-                                    <action selector="clickGetAllMSG:" destination="xFR-pI-dd5" eventType="touchUpInside" id="Jo3-yT-Ctg"/>
+                                    <action selector="clickCreateStrideAppConversation:" destination="8f1-OL-NZt" eventType="touchUpInside" id="8Ol-ge-ttx"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N3D-nk-gVV">
                                 <rect key="frame" x="184" y="204" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="lastMSG" backgroundImage="buttonBlue.png"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VZL-B6-tAi">
+                                <rect key="frame" x="255" y="254" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="clear" backgroundImage="buttonBlue.png"/>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                                 <connections>
-                                    <action selector="clickGetLastMSG:" destination="xFR-pI-dd5" eventType="touchUpInside" id="2Rb-Mc-Dpg"/>
+                                    <action selector="clickClearTV:" destination="8f1-OL-NZt" eventType="touchUpInside" id="qdp-ew-dVo"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lg4-3A-XIB">
                                 <rect key="frame" x="260" y="204" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="刷新" backgroundImage="buttonBlue.png"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MrW-az-FEM">
+                                <rect key="frame" x="92" y="225" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="allMSG" backgroundImage="buttonBlue.png"/>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                                 <connections>
-                                    <action selector="clickRefreshMsgFromServer:" destination="xFR-pI-dd5" eventType="touchUpInside" id="ZMJ-4y-Wbs"/>
+                                    <action selector="cilckGetStrideAppConvAllMSG:" destination="8f1-OL-NZt" eventType="touchUpInside" id="etT-ja-a0C"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Wv-5s-8wY">
                                 <rect key="frame" x="90" y="204" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1154,18 +1298,32 @@
                                 <rect key="frame" x="23" y="235" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="发文本" backgroundImage="buttonBlue.png"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rmF-pg-mFq">
+                                <rect key="frame" x="160" y="225" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="delAllMsg" backgroundImage="buttonBlue.png"/>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                                 <connections>
-                                    <action selector="clicksendText:" destination="xFR-pI-dd5" eventType="touchUpInside" id="NVV-u1-XJK"/>
+                                    <action selector="cilckDelStrideAppConvAllMSG:" destination="8f1-OL-NZt" eventType="touchUpInside" id="hnN-ry-64y"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="t2q-rw-vwX">
                                 <rect key="frame" x="96" y="235" width="59" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="发图片" backgroundImage="buttonBlue.png"/>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J80-tW-L35">
+                                <rect key="frame" x="235" y="225" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="LastMsg" backgroundImage="buttonBlue.png"/>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                                 <connections>
-                                    <action selector="clickSendImageMSG:" destination="xFR-pI-dd5" eventType="touchUpInside" id="xCh-wj-FSa"/>
+                                    <action selector="clickGetStrideAppConvLastMSG:" destination="8f1-OL-NZt" eventType="touchUpInside" id="oOg-2m-HDH"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="alW-57-ECd">
                                 <rect key="frame" x="167" y="235" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1680,14 +1838,514 @@
                                     <action selector="clickSendGroupLocalMsgByContent:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="Xol-Lj-j7F"/>
                                 </connections>
                             </button>
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="msgid：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QRJ-gS-2j9">
+                                <rect key="frame" x="13" y="258" width="64" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="dDC-Wq-kIW">
+                                <rect key="frame" x="77" y="254" width="101" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LCO-6W-MIl">
+                                <rect key="frame" x="181" y="254" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="获取消息" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickGetSomeMsgidContent:" destination="8f1-OL-NZt" eventType="touchUpInside" id="enE-mh-nK7"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="b1r-IG-1Cy">
+                                <rect key="frame" x="13" y="287" width="291" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="INa-PB-ysa">
+                                <rect key="frame" x="160" y="100" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="设置" id="LHF-IY-NkA"/>
+                    <connections>
+                        <outlet property="TF_targetAppkey" destination="PJ5-OW-Hx4" id="31n-ag-jfU"/>
+                        <outlet property="TF_user1" destination="Ycn-kE-9aD" id="nWH-VP-7Hw"/>
+                        <outlet property="TF_user2" destination="N2n-gV-FhH" id="sHG-NJ-9Fc"/>
+                        <outlet property="TV_resultShow" destination="b1r-IG-1Cy" id="8Ag-Yw-vEj"/>
+                        <outlet property="msgidV" destination="dDC-Wq-kIW" id="00g-9V-hhC"/>
+                        <outlet property="newsPassword" destination="nLF-Ch-fyN" id="tDP-fF-cwl"/>
+                        <outlet property="oldPassword" destination="d2y-gp-3Go" id="3Nv-4n-olf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XCf-Cu-KiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="480.99999999999994"/>
+        </scene>
+        <!--会话-->
+        <scene sceneID="wVb-3y-VKM">
+            <objects>
+                <viewController id="xFR-pI-dd5" customClass="ConversationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Ah-mq-Ko8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WFe-Kx-Aws">
+                                <rect key="frame" x="17" y="204" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="AllMSG" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickGetAllMSG:" destination="xFR-pI-dd5" eventType="touchUpInside" id="Jo3-yT-Ctg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N3D-nk-gVV">
+                                <rect key="frame" x="184" y="204" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="lastMSG" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickGetLastMSG:" destination="xFR-pI-dd5" eventType="touchUpInside" id="2Rb-Mc-Dpg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lg4-3A-XIB">
+                                <rect key="frame" x="260" y="204" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="刷新" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickRefreshMsgFromServer:" destination="xFR-pI-dd5" eventType="touchUpInside" id="ZMJ-4y-Wbs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Wv-5s-8wY">
+                                <rect key="frame" x="90" y="204" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="delAllMSG" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickDelAllMsg:" destination="xFR-pI-dd5" eventType="touchUpInside" id="lgZ-QL-cTW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Vp-6d-1XC">
+                                <rect key="frame" x="14" y="443" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="clearTV" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickClearTV:" destination="xFR-pI-dd5" eventType="touchUpInside" id="z0Z-op-jtT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k5g-32-ZrM">
+                                <rect key="frame" x="23" y="235" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="发文本" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clicksendText:" destination="xFR-pI-dd5" eventType="touchUpInside" id="NVV-u1-XJK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="t2q-rw-vwX">
+                                <rect key="frame" x="96" y="235" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="发图片" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendImageMSG:" destination="xFR-pI-dd5" eventType="touchUpInside" id="xCh-wj-FSa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="alW-57-ECd">
+                                <rect key="frame" x="167" y="235" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="发语音" backgroundImage="buttonBlue.png"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未读数：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JYj-Kk-zbb">
+                                <rect key="frame" x="227" y="242" width="84" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6aM-R0-o51">
+                                <rect key="frame" x="18" y="79" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="VsA-a7-Kix">
+                                <rect key="frame" x="61" y="70" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="群ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="whM-K5-kcH">
+                                <rect key="frame" x="20" y="108" width="38" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="F7r-eA-09K">
+                                <rect key="frame" x="62" y="104" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="frg-XZ-bX7">
+                                <rect key="frame" x="152" y="67" width="56" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="获取U" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSearchCovByUser:" destination="xFR-pI-dd5" eventType="touchUpInside" id="dnW-PD-4si"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="65u-xs-VR0">
+                                <rect key="frame" x="155" y="101" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="获取G" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickGetCovByGroupID:" destination="xFR-pI-dd5" eventType="touchUpInside" id="tJH-ZS-Pix"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EFg-84-y5R">
+                                <rect key="frame" x="216" y="69" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="创建" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickCreateSingleCovByUser:" destination="xFR-pI-dd5" eventType="touchUpInside" id="m7M-3c-xVn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Fr-e5-fJK">
+                                <rect key="frame" x="224" y="103" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="创建" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickCreateCovByGroupID:" destination="xFR-pI-dd5" eventType="touchUpInside" id="TJZ-mO-K7N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lz7-sY-Rak">
+                                <rect key="frame" x="261" y="69" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="删除" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickDelCovByUser:" destination="xFR-pI-dd5" eventType="touchUpInside" id="Ieg-gO-2iD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="msgID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qAF-nN-RQj">
+                                <rect key="frame" x="12" y="142" width="45" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始数:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2wR-ZF-Syp">
+                                <rect key="frame" x="12" y="176" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数量:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KmG-Cc-NAM">
+                                <rect key="frame" x="120" y="175" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="4hp-GK-DVw">
+                                <rect key="frame" x="59" y="138" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="UTM-fi-iht">
+                                <rect key="frame" x="59" y="172" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="32b-ZS-zvk">
+                                <rect key="frame" x="149" y="171" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1d3-R0-tPK">
+                                <rect key="frame" x="157" y="136" width="79" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="获取消息" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickGetMessageByMSGID:" destination="xFR-pI-dd5" eventType="touchUpInside" id="bCD-TL-Ku8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kzt-qR-YR0">
+                                <rect key="frame" x="208" y="172" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="查询" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSearchSomeMessage:" destination="xFR-pI-dd5" eventType="touchUpInside" id="Ra5-eL-lrv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZfI-eu-GAc">
+                                <rect key="frame" x="243" y="137" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="清零" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickClearUnreadCount:" destination="xFR-pI-dd5" eventType="touchUpInside" id="zot-sy-lGd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DnU-bz-z6c">
+                                <rect key="frame" x="271" y="101" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="删除" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickDelCovByGroupID:" destination="xFR-pI-dd5" eventType="touchUpInside" id="4UZ-lY-wbe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="会话" id="aZC-vQ-ZmM"/>
+                    <connections>
+                        <outlet property="covGroupID" destination="F7r-eA-09K" id="QbY-0w-Cq5"/>
+                        <outlet property="covJMsgID" destination="4hp-GK-DVw" id="4Uf-DF-hrc"/>
+                        <outlet property="covLimit" destination="32b-ZS-zvk" id="Q4R-k3-3Qm"/>
+                        <outlet property="covOffSet" destination="UTM-fi-iht" id="Axi-xc-g5I"/>
+                        <outlet property="covUnreadCountLB" destination="JYj-Kk-zbb" id="yV4-wT-jFR"/>
+                        <outlet property="covUser" destination="VsA-a7-Kix" id="Kyq-C6-4Od"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d31-eK-b5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826" y="-312.99999999999994"/>
+        </scene>
+        <!--msg-->
+        <scene sceneID="RDM-Lz-8uE">
+            <objects>
+                <viewController id="qv2-Ps-xhn" customClass="JMSGMsgViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yj3-uJ-Xoj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VNb-Yn-pZ0">
+                                <rect key="frame" x="12" y="67" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="07J-Vt-Qdw">
+                                <rect key="frame" x="56" y="63" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GroupID：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4IJ-lW-Mhs">
+                                <rect key="frame" x="151" y="66" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="wxk-yL-oy8">
+                                <rect key="frame" x="224" y="62" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appkey：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P0b-pq-BfV">
+                                <rect key="frame" x="12" y="101" width="75" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="uuv-lS-sgu">
+                                <rect key="frame" x="85" y="94" width="224" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Z33-LY-Roo">
+                                <rect key="frame" x="9" y="150" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Text" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendTextForSingle:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="hQg-fJ-mQm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j9p-Pb-uLa">
+                                <rect key="frame" x="51" y="150" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="StrideText" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendStrideAppTextForSingle:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="3g1-Lo-eve"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="S6y-Br-OC0">
+                                <rect key="frame" x="153" y="150" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Image" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendImageForSingle:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="mgO-ct-9GZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zG6-s3-A5N">
+                                <rect key="frame" x="211" y="152" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="StrideImage" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendStrideAppImageForSingle:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="xuV-RW-JYF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wt5-uK-nkV">
+                                <rect key="frame" x="5" y="182" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Voice" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendVoiceForSingle:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="bPo-xI-5pa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e5A-N1-4lh">
+                                <rect key="frame" x="62" y="182" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="StrideVoice" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendStrideAppVoiceForSingle:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="Tbr-7z-h3d"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="______________快捷单聊_____________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FuR-yJ-gpW">
+                                <rect key="frame" x="37" y="129" width="263" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="____________快捷群聊________________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Waa-Gk-CBo">
+                                <rect key="frame" x="36" y="212" width="270" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="W5g-EM-fJh">
+                                <rect key="frame" x="20" y="238" width="41" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Text" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendTextForGroup:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="3mx-Od-3SN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ada-KP-RUG">
+                                <rect key="frame" x="78" y="238" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Image" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendImageForGroup:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="KBi-sn-Smf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="____________creat Single Content_________" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4ZW-9c-6Nm">
+                                <rect key="frame" x="24" y="267" width="289" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dpp-Tp-Zyx">
+                                <rect key="frame" x="81" y="296" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Image" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendContentImageForSingle:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="RPH-aj-PaC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1rY-9x-gTc">
+                                <rect key="frame" x="149" y="296" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Custom" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendCustomContentForSingle:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="zef-ba-vKr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iZN-n7-TTU">
+                                <rect key="frame" x="9" y="296" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Text" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendContentTextForSingle:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="GW2-ih-TPx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="____________creat Group Content______" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zfC-N8-6uU">
+                                <rect key="frame" x="10" y="334" width="287" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kNo-XU-vRK">
+                                <rect key="frame" x="0.0" y="363" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Text" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendContentTextForGroup:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="Bzo-vo-IEh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6b3-yY-4PZ">
+                                <rect key="frame" x="146" y="363" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Custom" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendCustomContentForGroup:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="rw2-vy-unv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qv2-fZ-ua4">
+                                <rect key="frame" x="230" y="363" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Voice" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendVoiceContentForGroup:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="R3m-qs-6RU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tm8-dz-Ed6">
+                                <rect key="frame" x="71" y="363" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Image" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendImageContentForGroup:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="NH5-NF-FSM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="da7-4k-3rq">
+                                <rect key="frame" x="146" y="240" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Voice" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendVoiceForGroup:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="lNq-sf-Nuf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lbS-b8-y9o">
+                                <rect key="frame" x="234" y="298" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Voice" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendVoiceContentForSingle:" destination="qv2-Ps-xhn" eventType="touchUpInside" id="11q-80-ISb"/>
+                                </connections>
+                            </button>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="msg" id="DMd-ys-RNa"/>
                     <connections>
                         <outlet property="appkeyTF" destination="uuv-lS-sgu" id="cgG-eN-5MG"/>
+<<<<<<< HEAD
                         <outlet property="fileImageTF" destination="BAv-Yz-Z03" id="ObF-5o-Z0u"/>
                         <outlet property="fileUrlTF" destination="2g8-rR-mxA" id="Rwx-aA-3TZ"/>
+=======
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
                         <outlet property="groupIdTF" destination="wxk-yL-oy8" id="HxD-dj-4DM"/>
                         <outlet property="userTF" destination="07J-Vt-Qdw" id="urQ-Bk-cFB"/>
                         <outlet property="voiceBtnForGroupContent" destination="Qv2-fZ-ua4" id="64r-fV-fK0"/>
@@ -1699,7 +2357,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTV-yK-AM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="418" y="-423"/>
+=======
+            <point key="canvasLocation" x="-448" y="-729"/>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -1719,6 +2381,7 @@
                         <segue destination="xFR-pI-dd5" kind="relationship" relationship="viewControllers" id="tvu-a5-Vbc"/>
                         <segue destination="pi3-gS-jZH" kind="relationship" relationship="viewControllers" id="RJw-cw-cbF"/>
                         <segue destination="qv2-Ps-xhn" kind="relationship" relationship="viewControllers" id="zbM-xa-IWR"/>
+<<<<<<< HEAD
                         <segue destination="EX1-0X-GIa" kind="relationship" relationship="viewControllers" id="noW-y0-GIU"/>
                     </connections>
                 </tabBarController>
@@ -2142,6 +2805,430 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iTN-dW-d8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-508" y="1088"/>
+=======
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="-233"/>
+        </scene>
+        <!--213新功能-->
+        <scene sceneID="TFM-Ef-gdd">
+            <objects>
+                <viewController id="pi3-gS-jZH" customClass="DisturbAndBlackListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fvU-xP-LFJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user1：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dbC-GT-Qdn">
+                                <rect key="frame" x="12" y="67" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MaxM:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZjG-Ck-CwQ">
+                                <rect key="frame" x="165" y="66" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppKey：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f2g-cC-c9Z">
+                                <rect key="frame" x="12" y="129" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="nxn-cd-dpo">
+                                <rect key="frame" x="60" y="62" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="WyH-gv-tMM">
+                                <rect key="frame" x="215" y="62" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="9Ij-jz-glJ">
+                                <rect key="frame" x="60" y="62" width="102" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="62Y-P6-h7A">
+                                <rect key="frame" x="70" y="125" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="群id：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pJE-mz-zK4">
+                                <rect key="frame" x="12" y="96" width="48" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="tzD-l1-vf7">
+                                <rect key="frame" x="62" y="93" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="a86-m8-Qsi">
+                                <rect key="frame" x="4" y="158" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="建单聊" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickCreatStrideSingleConversation:" destination="pi3-gS-jZH" eventType="touchUpInside" id="btj-Wm-5dt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MRm-o6-heI">
+                                <rect key="frame" x="78" y="158" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="建群聊" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickCreatStrideGroupConversation:" destination="pi3-gS-jZH" eventType="touchUpInside" id="PcD-9z-55u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zTr-sf-4LH">
+                                <rect key="frame" x="-1" y="197" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="删跨app单聊" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickDelStrideSingleConversation:" destination="pi3-gS-jZH" eventType="touchUpInside" id="zNe-Cs-uZq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i4e-Ug-NDg">
+                                <rect key="frame" x="232" y="370" width="82" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="删所有消息" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickDelStrideConversationMsg:" destination="pi3-gS-jZH" eventType="touchUpInside" id="0ri-d5-PrN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fAu-TK-387">
+                                <rect key="frame" x="78" y="404" width="68" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="add成员" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickAddStrideAppGroupMember:" destination="pi3-gS-jZH" eventType="touchUpInside" id="Wec-ur-75U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ll5-lg-ff8">
+                                <rect key="frame" x="159" y="403" width="66" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="del成员" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickDelStrideAppGroupMember:" destination="pi3-gS-jZH" eventType="touchUpInside" id="Brj-tA-lEH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3WQ-5e-Mjq">
+                                <rect key="frame" x="-1" y="230" width="57" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="u开防" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickOpenStrideDisturb:" destination="pi3-gS-jZH" eventType="touchUpInside" id="kbA-pV-SbV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fLo-fZ-ZWG">
+                                <rect key="frame" x="58" y="229" width="56" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="u关防" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickClosedStrideDisturb:" destination="pi3-gS-jZH" eventType="touchUpInside" id="tfr-EB-5GV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i4i-rz-68o">
+                                <rect key="frame" x="4" y="269" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="开全防" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickOpenGlobalStrideDisturb:" destination="pi3-gS-jZH" eventType="touchUpInside" id="xav-pg-Z0A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DaM-BR-jih">
+                                <rect key="frame" x="90" y="269" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="关全防" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickClosedGlobalStrideDisturb:" destination="pi3-gS-jZH" eventType="touchUpInside" id="Qjl-Xo-x2D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mjL-sr-AHH">
+                                <rect key="frame" x="244" y="267" width="54" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="防列表" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickGetStrideDisturbList:" destination="pi3-gS-jZH" eventType="touchUpInside" id="7Iv-EU-NYa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RVU-ql-AZL">
+                                <rect key="frame" x="119" y="229" width="53" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="U防状态" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickGetStrideDisturbStatusForUser:" destination="pi3-gS-jZH" eventType="touchUpInside" id="oaQ-5T-UZl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="coO-N5-MJk">
+                                <rect key="frame" x="164" y="269" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="全防状态" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickGetGlobalStrideDisturbStatus:" destination="pi3-gS-jZH" eventType="touchUpInside" id="qvm-Pn-yx6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OJB-b9-Rw7">
+                                <rect key="frame" x="4" y="305" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="黑名单" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickGetBlackList:" destination="pi3-gS-jZH" eventType="touchUpInside" id="eVp-2U-acn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="St2-zh-hjE">
+                                <rect key="frame" x="79" y="305" width="66" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="加黑名单" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickAddBlackListMember:" destination="pi3-gS-jZH" eventType="touchUpInside" id="oJo-7e-fA9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v56-ga-VhF">
+                                <rect key="frame" x="162" y="305" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="删黑名单" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickDelBlackListMember:" destination="pi3-gS-jZH" eventType="touchUpInside" id="iek-5f-2c7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="guO-nt-Tgl">
+                                <rect key="frame" x="12" y="338" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="加跨黑名单" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickAddBlackListStrideMember:" destination="pi3-gS-jZH" eventType="touchUpInside" id="5kh-3J-cqE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H1H-Xe-3ag">
+                                <rect key="frame" x="119" y="338" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="删跨黑名单" backgroundImage="buttonBlue.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickDelBlackListStrideMember:" destination="pi3-gS-jZH" eventType="touchUpInside" id="ul5-Z3-SN0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n0u-Cf-F5k">
+                                <rect key="frame" x="7" y="370" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="发文本" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendStrideText:" destination="pi3-gS-jZH" eventType="touchUpInside" id="DTp-pH-AoP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="glC-BQ-qyg">
+                                <rect key="frame" x="153" y="370" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="发custom" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendStrideCustomMsg:" destination="pi3-gS-jZH" eventType="touchUpInside" id="fHq-1O-WIk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Oz1-6L-KiL">
+                                <rect key="frame" x="84" y="370" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="发图片" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickSendStrideImge:" destination="pi3-gS-jZH" eventType="touchUpInside" id="IWi-qh-g5e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3LS-u5-WIE">
+                                <rect key="frame" x="9" y="404" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="群信息" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickGetGroupInfo:" destination="pi3-gS-jZH" eventType="touchUpInside" id="ZNh-eA-Z15"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ce5-bp-w40">
+                                <rect key="frame" x="89" y="197" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="删群聊" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickDelStrideGroupConversion:" destination="pi3-gS-jZH" eventType="touchUpInside" id="kHH-J5-cQT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xiR-eS-D8K">
+                                <rect key="frame" x="249" y="229" width="61" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="G防状态" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickGetDisturbStatusForGroup:" destination="pi3-gS-jZH" eventType="touchUpInside" id="fod-C3-87O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O5y-kW-2Sb">
+                                <rect key="frame" x="153" y="158" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="获取单聊" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickGetStrideSingleConversation:" destination="pi3-gS-jZH" eventType="touchUpInside" id="Bb5-Kf-OL5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1x1-Fd-yvj">
+                                <rect key="frame" x="238" y="158" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="获取群聊" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickGetStrideGroupConversation:" destination="pi3-gS-jZH" eventType="touchUpInside" id="ug3-eW-pyj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3H1-f2-qKk">
+                                <rect key="frame" x="152" y="196" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="获取allMsg" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickGetConversationAllMsg:" destination="pi3-gS-jZH" eventType="touchUpInside" id="JGz-CE-Gia"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g5w-vd-MAC">
+                                <rect key="frame" x="250" y="196" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="G防开" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickOpenDisturbForGroup:" destination="pi3-gS-jZH" eventType="touchUpInside" id="nUR-Qg-YNB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Oxn-l2-bFb">
+                                <rect key="frame" x="190" y="230" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="G防关" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickClosedDisturbForGroup:" destination="pi3-gS-jZH" eventType="touchUpInside" id="Ooi-CY-ibw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1Fs-lS-1sh">
+                                <rect key="frame" x="255" y="304" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="黑状态" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickGetUserBlackStatus:" destination="pi3-gS-jZH" eventType="touchUpInside" id="I4s-9f-sJd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SN6-Sz-P9Y">
+                                <rect key="frame" x="232" y="337" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="跨黑状态" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickGetStrideAppUserBlackStatus:" destination="pi3-gS-jZH" eventType="touchUpInside" id="Bvb-69-zDF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tto-Wk-eae">
+                                <rect key="frame" x="4" y="436" width="181" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="批量添加跨应用群成员" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickAddBatchStrideAppGroupMember:" destination="pi3-gS-jZH" eventType="touchUpInside" id="iBI-U5-73E"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="iTR-Ie-1lX">
+                                <rect key="frame" x="215" y="92" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="str:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IK6-hm-WAR">
+                                <rect key="frame" x="181" y="93" width="25" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="toz-PL-xIP">
+                                <rect key="frame" x="206" y="436" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="批量注册" backgroundImage="buttonBlue.png"/>
+                                <connections>
+                                    <action selector="clickRegisterBatchUser:" destination="pi3-gS-jZH" eventType="touchUpInside" id="7kT-gO-mbb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="213新功能" id="ohv-fI-sOb" userLabel="免打扰&amp;黑名单"/>
+                    <connections>
+                        <outlet property="appkeyTF" destination="62Y-P6-h7A" id="FbL-iM-YfA"/>
+                        <outlet property="groupIdTF" destination="tzD-l1-vf7" id="KR4-EH-taa"/>
+                        <outlet property="strUserTF" destination="iTR-Ie-1lX" id="l4B-CA-q7T"/>
+                        <outlet property="user1TF" destination="9Ij-jz-glJ" id="r6h-JH-8sq"/>
+                        <outlet property="user2TF" destination="WyH-gv-tMM" id="43N-Md-NnE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iTN-dW-d8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-430" y="228.99999999999997"/>
+>>>>>>> 74e9421649647b162dda870da3e7c6b8d672ebc2
         </scene>
     </scenes>
     <resources>
