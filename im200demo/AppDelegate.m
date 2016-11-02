@@ -27,7 +27,7 @@
 NSArray *_delegateCovList;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSString * appkey = @"98f67476b10c3bf6690559a9";
+    NSString * appkey = @"";
     
     NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
     NSLog(@"--------IDFA:%@",advertisingId);

@@ -27,7 +27,7 @@
 		603BFA361BDDFFD00001148C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603BFA351BDDFFD00001148C /* UIKit.framework */; };
 		603BFA381BDDFFD80001148C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603BFA371BDDFFD70001148C /* Security.framework */; };
 		603BFA3C1BDDFFEA0001148C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603BFA3B1BDDFFEA0001148C /* AudioToolbox.framework */; };
-		604547261D7E77D600A88442 /* FiendTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604547251D7E77D600A88442 /* FiendTestViewController.m */; };
+		604547261D7E77D600A88442 /* FriendTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 604547251D7E77D600A88442 /* FriendTestViewController.m */; };
 		6045F9EA1D6ED6EA00113F9A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6045F9E91D6ED6EA00113F9A /* libsqlite3.tbd */; };
 		604C4BBE1DAE438E00E979A3 /* JMessage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604C4BBD1DAE438E00E979A3 /* JMessage.framework */; };
 		605A98B41DC0927F0008EFD7 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 605A98B31DC0927F0008EFD7 /* libresolv.tbd */; };
@@ -94,8 +94,8 @@
 		603BFA391BDDFFE00001148C /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		603BFA3B1BDDFFEA0001148C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		603BFA3D1BDDFFFD0001148C /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		604547241D7E77D600A88442 /* FiendTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiendTestViewController.h; sourceTree = "<group>"; };
-		604547251D7E77D600A88442 /* FiendTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiendTestViewController.m; sourceTree = "<group>"; };
+		604547241D7E77D600A88442 /* FriendTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTestViewController.h; sourceTree = "<group>"; };
+		604547251D7E77D600A88442 /* FriendTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTestViewController.m; sourceTree = "<group>"; };
 		6045F9E91D6ED6EA00113F9A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		604C4BBD1DAE438E00E979A3 /* JMessage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JMessage.framework; sourceTree = "<group>"; };
 		6059324A1D3DCAB6000988A4 /* JMessage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JMessage.framework; sourceTree = "<group>"; };
@@ -234,8 +234,8 @@
 				603BFA1E1BDDFF240001148C /* LaunchScreen.storyboard */,
 				603BFA211BDDFF240001148C /* Info.plist */,
 				603BFA0D1BDDFF240001148C /* Supporting Files */,
-				604547241D7E77D600A88442 /* FiendTestViewController.h */,
-				604547251D7E77D600A88442 /* FiendTestViewController.m */,
+				604547241D7E77D600A88442 /* FriendTestViewController.h */,
+				604547251D7E77D600A88442 /* FriendTestViewController.m */,
 			);
 			name = im213demo;
 			path = im200demo;
@@ -359,6 +359,7 @@
 				TargetAttributes = {
 					603BFA091BDDFF230001148C = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 8X2A38Q9VD;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -436,7 +437,7 @@
 				603BFA151BDDFF240001148C /* FirstViewController.m in Sources */,
 				6095E9851D2E27AE006EF3EA /* XHVoiceCommonHelper.m in Sources */,
 				6008A5431BE0A4E2007A634F /* messageViewController.m in Sources */,
-				604547261D7E77D600A88442 /* FiendTestViewController.m in Sources */,
+				604547261D7E77D600A88442 /* FriendTestViewController.m in Sources */,
 				6095E9871D2E27AE006EF3EA /* XHVoiceRecordHUD.m in Sources */,
 				603BFA0F1BDDFF240001148C /* main.m in Sources */,
 				60F989871D0565B0007012CC /* NSNull+Fff.m in Sources */,
@@ -575,7 +576,7 @@
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = im213qptXCTest.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8X2A38Q9VD;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/im200demo",
@@ -593,8 +594,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = im213qptXCTest;
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "8b8c277d-6e52-4a00-926e-b1ac213eaec1";
+				PROVISIONING_PROFILE_SPECIFIER = "cn.jmlingz-dev-160909";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;

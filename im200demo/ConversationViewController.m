@@ -481,7 +481,8 @@
     [convTextContent addNumberExtra:[[NSNumber alloc]initWithInt:1 ] forKey:@"cov Text nsnumber key"];
 
     _covJMessage = [_covConversation createMessageWithContent:convTextContent ];
-    [_covJMessage setFromName:@"covText发送者"];
+    NSString *fromName = [NSString stringWithFormat:@"covText发送者-%@",_covUserNameV];
+    [_covJMessage setFromName:fromName];
     [_covConversation sendMessage:_covJMessage];
 
 
@@ -543,6 +544,7 @@
 -(void)sendImageMsg:(NSData *)imagePath{
     [JMessage removeAllDelegates];
     [JMessage addDelegate:self withConversation:nil];
+    
     [_covAllShowTV setText:_covShow];
     JMSGImageContent * convSendImage = [[JMSGImageContent alloc] initWithImageData:imagePath];
     
@@ -553,6 +555,8 @@
         if (error == nil) {
             NSLog(@"-------ConversationViewController  sendImageMsg 发送消息 －－error： %@ ,-－－result：%@",error,resultObject);
             _covJMessage= resultObject;
+            NSString * sendImageFromName = [NSString stringWithFormat:@"-sendImageMsg-fromName-%@",_covUserNameV];
+            [_covJMessage setFromName:sendImageFromName];
             
             [_covConversation sendMessage: _covJMessage];
             

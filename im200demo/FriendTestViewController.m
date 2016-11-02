@@ -6,10 +6,10 @@
 //  Copyright © 2016 LinGuangzhen. All rights reserved.
 //
 
-#import "FiendTestViewController.h"
+#import "FriendTestViewController.h"
 #import <JMessage/JMessage.h>
 
-@interface FiendTestViewController ()<JMessageDelegate>
+@interface FriendTestViewController ()<JMessageDelegate>
 {
     NSString *appkey;
     NSString *reason;
@@ -45,7 +45,7 @@
 
 @end
 
-@implementation FiendTestViewController
+@implementation FriendTestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
