@@ -456,6 +456,9 @@
         case  kJMSGEventNotificationUserLoginStatusUnexpected:
             NSLog(@"---------friend--onReceiveNotificationEvent收到 Juid变更导致下线的 事件，描述：%@",nEvent.eventDescription);
             break;
+        case  kJMSGEventNotificationReceiveServerFriendUpdate:
+            NSLog(@"---------friend聊--onReceiveNotificationEvent收到 服务端变更好友相关 事件，描述：%@",nEvent.eventDescription);
+            break;
         default:
             NSLog(@"---------friend--onReceiveNotificationEvent收到 未知事件类型，描述：%@",nEvent.eventDescription);
             break;

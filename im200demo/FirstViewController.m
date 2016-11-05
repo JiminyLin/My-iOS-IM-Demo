@@ -762,6 +762,9 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
         case  kJMSGEventNotificationUserLoginStatusUnexpected:
             NSLog(@"---------home--onReceiveNotificationEvent收到 Juid变更导致下线的 事件，描述：%@",nEvent.eventDescription);
             break;
+        case  kJMSGEventNotificationReceiveServerFriendUpdate:
+            NSLog(@"---------home--onReceiveNotificationEvent收到 服务端变更好友相关 事件，描述：%@",nEvent.eventDescription);
+            break;
         default:
             NSLog(@"---------home--onReceiveNotificationEvent收到 未知事件类型，描述：%@",nEvent.eventDescription);
             break;
@@ -803,6 +806,12 @@ NSString *theUserName,*theUserPassword,*allResult,*avatarPath;
 //    NSLog(@"----home页面测试---onFriendChanged:{\n好友通知事件类型:%ld,\n获取事件发生的理由:%@,\n事件发送者的username:%@,\n获取事件发送者user:%@",disturbJMSGFriendEventContent.eventType,[disturbJMSGFriendEventContent getReason],[disturbJMSGFriendEventContent getFromUsername],[disturbJMSGFriendEventContent getFromUser]);
 //    
 //}
+- (IBAction)clickGetReportSDKVersion:(id)sender {
+    // 测试可通过这个key 拿到本地保存的版本号
+    NSString *version = [[NSUserDefaults standardUserDefaults]objectForKey:@"JMessage_last_reoprt_version_key"];
+    
+    NSLog(@"----Message_last_reoprt_version_key：%@",version);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

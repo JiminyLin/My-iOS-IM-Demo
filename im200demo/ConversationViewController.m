@@ -481,8 +481,7 @@
     [convTextContent addNumberExtra:[[NSNumber alloc]initWithInt:1 ] forKey:@"cov Text nsnumber key"];
 
     _covJMessage = [_covConversation createMessageWithContent:convTextContent ];
-    NSString *fromName = [NSString stringWithFormat:@"covText发送者-%@",_covUserNameV];
-    [_covJMessage setFromName:fromName];
+    [_covJMessage setFromName:@"covText发送者"];
     [_covConversation sendMessage:_covJMessage];
 
 
@@ -544,7 +543,6 @@
 -(void)sendImageMsg:(NSData *)imagePath{
     [JMessage removeAllDelegates];
     [JMessage addDelegate:self withConversation:nil];
-    
     [_covAllShowTV setText:_covShow];
     JMSGImageContent * convSendImage = [[JMSGImageContent alloc] initWithImageData:imagePath];
     
@@ -555,8 +553,6 @@
         if (error == nil) {
             NSLog(@"-------ConversationViewController  sendImageMsg 发送消息 －－error： %@ ,-－－result：%@",error,resultObject);
             _covJMessage= resultObject;
-            NSString * sendImageFromName = [NSString stringWithFormat:@"-sendImageMsg-fromName-%@",_covUserNameV];
-            [_covJMessage setFromName:sendImageFromName];
             
             [_covConversation sendMessage: _covJMessage];
             
@@ -639,6 +635,9 @@
             break;
         case  kJMSGEventNotificationUserLoginStatusUnexpected:
             NSLog(@"---------conversation--onReceiveNotificationEvent收到 Juid变更导致下线的 事件，描述：%@",nEvent.eventDescription);
+            break;
+        case  kJMSGEventNotificationReceiveServerFriendUpdate:
+            NSLog(@"---------conversation--onReceiveNotificationEvent收到 服务端变更好友相关 事件，描述：%@",nEvent.eventDescription);
             break;
         default:
             NSLog(@"---------conversation--onReceiveNotificationEvent收到 未知事件类型，描述：%@",nEvent.eventDescription);

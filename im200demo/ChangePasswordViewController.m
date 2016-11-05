@@ -140,6 +140,9 @@ NSString * targetAppkeyStr = nil;
     JMSGTextContent * convTextContent = [[JMSGTextContent alloc] initWithText:convText];
     [convTextContent addStringExtra:@"cov-Text-string value" forKey:@"cov-Text-string key"];
     _changePwJMessage = [_changePwConversation createMessageWithContent:convTextContent];
+    
+    [_changePwJMessage  setFromName:@"-跨应用会话发消息的FromName"];
+    
     [_changePwConversation sendMessage:_changePwJMessage];
 
 //              [_changePwConversation sendTextMessage:sendContent];
@@ -482,6 +485,9 @@ _changePwConversation = [JMSGConversation singleConversationWithUsername:user1St
             break;
         case  kJMSGEventNotificationUserLoginStatusUnexpected:
             NSLog(@"---------change Password--onReceiveNotificationEvent收到 Juid变更导致下线的 事件，描述：%@",nEvent.eventDescription);
+            break;
+        case  kJMSGEventNotificationReceiveServerFriendUpdate:
+            NSLog(@"---------change Password--onReceiveNotificationEvent收到 服务端变更好友相关 事件，描述：%@",nEvent.eventDescription);
             break;
         default:
             NSLog(@"---------change Password--onReceiveNotificationEvent收到 未知事件类型，描述：%@",nEvent.eventDescription);
